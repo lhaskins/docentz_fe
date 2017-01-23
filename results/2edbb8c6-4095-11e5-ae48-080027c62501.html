@@ -1,0 +1,194 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+        "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta charset="utf-8">
+    <!--meta http-equiv="X-UA-Compatible" content="IE=edge"-->
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="sports collegiate selection assistance">
+    <meta name="author" content="college university guidance student athlete match scholarship selection">
+    <meta name='keywords' content='sports, academics' />
+    <meta property='og:site_name' content='Docentz' />
+    <meta property='og:title' content='Docentz' />
+    <meta property='og:description' content='sports academic selection process' />
+    <meta property='og:url' content='http://www.docentz.com/' />
+    <link rel="shortcut icon" href="http://192.168.1.13:6543/static/docentz.jpg">
+
+    <title>Docentz - Questionaire</title>
+
+    <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+    <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+    <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+
+    <!--link href="//oss.maxcdn.com/libs/twitter-bootstrap/3.0.3/css/bootstrap.min.css" rel="stylesheet"-->
+    <link href="http://192.168.1.13:6543/static/theme.css" rel="stylesheet">
+
+  <script type="text/javascript"
+          src="/deform_static/scripts/jquery-1.4.2.min.js"></script>
+  <script type="text/javascript"
+          src="/deform_static/scripts/deform.js"></script>
+
+  <style type='text/css'>
+  .wsite-header {
+	background-image: url(/static/docentz.jpeg) !important;
+	background-position: 0 0 !important;
+  }
+  </style>
+</head>
+
+<body style="font-family:Georgia,sans-serif;">
+<div>
+  <center>
+  <h2 class="banner-template" style="padding-bottom:30px;">
+    <img style="width:25%;height:25%;margin:0;padding:0" class="logo img-responsive" src="http://192.168.1.13:6543/static/small_docentz.png" alt="Docentz logo"> <br/>
+    <b style="color:#d2691e">Docentz</b> Bracket Results for <b>Peppi Student</b> - <b>Basketball (W)</b>
+  </h2>
+  <!--table style="width:600px; margin:15px auto; color:#228b22; font-size:14px; border:1px solid #228b22;"-->
+  <table style="width:600px; margin:15px auto; color:#228b22; font-size:14px; border:2px solid #ffffff;">
+    <tr style="border:2px solid #ffffff;">
+        <td style="background:#b3b3b5;border:2px solid #ffffff;color:#303133;font-weight:bold;font-family:Georgia,sans-serif;padding:10px;" >Divisions</td>
+        <td style="background:#dedee0;color:#f88017;font-weight:100;font-family:Georgia,sans-serif;padding-right:10px; text-align:right;">NCAAD1, NCAAD2</td>
+    </tr>
+    <tr style="border:2px solid #ffffff;">
+        <td style="background:#b3b3b5;border:2px solid #ffffff;color:#303133;font-weight:bold;font-family:Georgia,sans-serif;padding-left:10px;">State(s) selected</td>
+        <td style="background:#dedee0;color:#f88017;font-weight:100;font-family:Georgia,sans-serif;padding-right:10px; text-align:right;">GA</td>
+    </tr>
+    <tr style="border:2px solid #ffffff;">
+        <td style="background:#b3b3b5;border:2px solid #ffffff;color:#303133;font-weight:bold;font-family:Georgia,sans-serif;padding-left:10px;">Possible Majors</td>
+        <td style="background:#dedee0;color:#f88017;font-weight:100;font-family:Georgia,sans-serif;padding-right:10px; text-align:right;">Computer Engineering, Other; Computer Engineering Technologies/Technicians, Other; Computer Engineering Technology/Technician; Computer Engineering, General</td>
+    </tr>
+  </table>
+  </center>
+</div>
+
+<div class="body-template container-fluid">
+   <p>Basketball (W) Scholarship Statistics: number given: 342; chances: 13.0</p>
+</div>
+
+
+
+
+
+<center>
+<canvas id="bracketField" width=1000 height=1000></canvas>
+<script type="text/javascript" src="/static/bracket.js">
+</script>
+
+<div>
+<script type="text/javascript">
+   var ctx = document.getElementById("bracketField").getContext("2d");
+   //var div = document.getElementById("mymain");
+   ctx.style.fontSize = "12px";
+
+   window.onload = function() {
+      		L = new Bracket();
+		// Round 1
+		x = new Round();
+                var matchup;
+                var bracket = {0: ['University of Michigan-Ann Arbor', 'University of Illinois at Chicago'], 1: ['University of Florida', 'University of North Texas'], 2: ['University of Washington-Seattle Campus', 'Kansas State University'], 3: ['University of Iowa', 'University of Illinois at Urbana-Champaign'], 4: ['Virginia Polytechnic Institute and State University', 'University of Missouri-Columbia'], 5: ['Florida State University', 'University of South Carolina-Columbia'], 6: ['Auburn University', 'North Carolina State University at Raleigh'], 7: ['Colorado State University-Fort Collins', 'Old Dominion University'], 8: ['University of Arizona', 'California State University-Northridge'], 9: ['University of Utah', 'The University of Texas at Arlington'], 10: ['University of Arkansas', 'California State University-Sacramento'], 11: ['University of Louisville', 'Wayne State University'], 12: ['West Virginia University', 'The University of Texas at San Antonio'], 13: ['Indiana University-Purdue University-Indianapolis', 'University of Akron Main Campus'], 14: ['Utah State University', 'The University of Texas-Pan American'], 15: ['San Francisco State University', 'Boise State University']};
+                for (matchup in bracket){
+                  x.append(new MatchUp(bracket[matchup][0],bracket[matchup][1]));
+                }
+                L.append(x);
+                prev = x;
+                while (x.getNumberOfMatchUps() > 0) {
+                  x = new Round(prev);
+                  M = x.previous().getMatchUps();
+                  var i;
+                  var p;
+                  for (i in M){
+                     p = M[i].getPlayers()
+                     if (p[1] == " ")
+                       M[i].setWinner(0);
+                  }
+                  var winner1, winner2;
+                  for (i in M){
+                     if (i%2 == 0) {
+                       winner1 = M[i].getWinner();
+                       winner2 = undefined;
+                     } else
+                       winner2 = M[i].getWinner();
+                     if ((winner1 != undefined) && (winner2 != undefined)) {
+                       x.append(new MatchUp(winner1,winner2,M[i-1],M[i]));
+                       winner1 = undefined;
+                     } else if (i%2 != 0) {
+                       if (winner1 == undefined)
+                         winner1 = ""
+                       if (winner2 == undefined)
+                         winner2 = ""
+                       x.append(new MatchUp(winner1,winner2,M[i-1],M[i]));
+                       winner1 = undefined;
+                     }
+                  }
+                  L.append(x);
+                  prev = x;
+                }
+
+		R = new Bracket();
+		// Round 1
+		x = new Round();
+                var matchup;
+                var bracket1 = {0: ['Georgia Institute of Technology-Main Campus', 'Texas A &amp; M University-College Station'], 1: ['Pennsylvania State University-Main Campus', 'University of Nebraska-Lincoln'], 2: ['Ohio State University-Main Campus', 'University of Minnesota-Twin Cities'], 3: ['University of Georgia', 'Texas Tech University'], 4: ['Michigan State University', 'University of Pittsburgh-Pittsburgh Campus'], 5: ['University of Colorado Boulder', 'University of California-San Diego'], 6: ['University of Kansas', 'University of California-Los Angeles'], 7: ['Iowa State University', 'University of Virginia-Main Campus'], 8: ['University of Cincinnati-Main Campus', 'East Carolina University'], 9: ['University of Kentucky', 'Portland State University'], 10: ['San Diego State University', 'Florida Atlantic University'], 11: ['University of South Florida-Main Campus', 'University of Nevada-Las Vegas'], 12: ['Western Michigan University', 'University of Memphis'], 13: ['University of New Mexico-Main Campus', 'The University of Texas at El Paso'], 14: ['University of North Carolina at Charlotte', 'California State University-Fresno'], 15: ['San Jose State University', 'Weber State University']};
+                for (matchup in bracket1){
+		    x.append(new MatchUp(bracket1[matchup][0],bracket1[matchup][1]));
+                }
+		R.append(x);
+		prev = x;
+                while (x.getNumberOfMatchUps() > 0) {
+                  x = new Round(prev);
+                  M = x.previous().getMatchUps();
+                  var i;
+                  var p;
+                  for (i in M){
+                     p = M[i].getPlayers()
+                     if (p[1] == " ")
+                       M[i].setWinner(0);
+                  }
+                  var winner1, winner2;
+                  for (i in M){
+                     if (i%2 == 0) {
+                       winner1 = M[i].getWinner();
+                       winner2 = undefined;
+                     } else
+                       winner2 = M[i].getWinner();
+                     if ((winner1 != undefined) && (winner2 != undefined)) {
+                       x.append(new MatchUp(winner1,winner2,M[i-1],M[i]));
+                       winner1 = undefined;
+                     } else if (i%2 != 0) {
+                       if (winner1 == undefined)
+                         winner1 = ""
+                       if (winner2 == undefined)
+                         winner2 = ""
+                       x.append(new MatchUp(winner1,winner2,M[i-1],M[i]));
+                       winner1 = undefined;
+                     }
+                  }
+                  R.append(x);
+                  prev = x;
+                }
+
+           L.draw(ctx, 1, 0, "left");
+           R.draw(ctx, 1, 0, "right");
+   }
+</script>
+</div>
+</center>
+
+    <div class="footer-template container-fluid">
+        <div class="links">
+          <ul>
+            <li><i class="glyphicon glyphicon-home icon-muted"></i><a href="/">Home</a></li>
+            <li><i class="fa fa-university icon-muted"></i><a href="/questionaire">Questionaire</a></li>
+            <li><i class="glyphicon glyphicon-bookmark icon-muted"></i><a href="http://www.studentathleteconfessions.com/confessions-of-a-student-athlete-blog">Helpful Links</a></li>
+            <li><i class="fa fa-twitter icon-muted"></i><a href="http://www.twitter.com/docentz">Twitter</a></li>
+            <li><i class="glyphicon glyphicon-globe icon-muted"></i><a href="/about-us">About Docentz</a></li>
+        </div>
+
+    <script src="//oss.maxcdn.com/libs/jquery/1.10.2/jquery.min.js"></script>
+    <script src="//oss.maxcdn.com/libs/twitter-bootstrap/3.0.3/js/bootstrap.min.js"></script>
+    </div>
+
+</body>
+</html>

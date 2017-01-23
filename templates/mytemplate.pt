@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="${request.locale_name}" xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="collegiate selection assistance">
+    <meta name="author" content="college university guidance student athlete match scholarship selection">
+    <link rel="shortcut icon" href="${request.static_url('cosa:static/docentz.jpg')}">
+
+    <title>Docentz</title>
+
+    <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+    <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+    <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+
+  <script>
+    (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+    (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+    m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+    })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+    ga('create', 'UA-86036219-1', 'auto');
+    ga('send', 'bracketview');
+  </script>
+
+    <!--link href="//oss.maxcdn.com/libs/twitter-bootstrap/3.0.3/css/bootstrap.min.css" rel="stylesheet"-->
+    <link href="${request.static_url('cosa:static/theme.css')}" rel="stylesheet">
+
+  </head>
+
+  <body class="home">
+    <div id="wrapper">
+      <div id="header">
+        <br/> <br/> <br/> <br/>
+      </div>
+
+      <div id="content">
+        <div class="container-fluid">
+          <div class="col-md-2">
+            <img class="logo img-responsive" src="${request.static_url('cosa:static/docentz.png')}">
+          </div>
+          <div class="col-md-10">
+            <span style="color:#f88017;font-size:60px;font-weight:600">Docentz<i style="color:#009e00; font-size:20px">beta</i></span>
+          </div>
+        </div>
+        <br/> <br/> <br/>
+        <center> <h1>
+          <span style="color: #009e00;font-weight:500">Guiding student athletes towards a better future</span>
+        </h1> </center>
+
+        <br/> <br/> <br/> <br/> 
+        <center>
+           <p style="font-size:20px"> Are you trying to figure out what college to go to? Are you an athlete? Let us help.<br/>
+           <!--p style="font-size:20px">Ready to climb into the driver's seat of your future?<br/-->
+           <a href="/questionaire">Answer these questions to get your college bracket results.</a></p>
+        </center>
+        <br/> <br/>
+      </div>
+      <div class="push"></div>
+    </div>
+
+      <div class="footer-template container-fluid">
+        <div class="links">
+          <ul>
+            <li><i class="glyphicon glyphicon-home icon-muted"></i><a href="/">Home</a></li>
+            <li><i class="fa fa-university icon-muted"></i><a href="/questionaire">Questionaire</a></li>
+            <li><i class="glyphicon glyphicon-bookmark icon-muted"></i><a href="/helpful-links">Helpful Links</a></li>
+            <li><i class="fa fa-twitter icon-muted"></i><a href="http://www.twitter.com/docentz">Twitter</a></li>
+            <li><i class="glyphicon glyphicon-globe icon-muted"></i><a href="/about-us">About Docentz</a></li>
+            <li><i class="glyphicons glyphicons-handshake icon-muted"></i><a href="/agreement">Docentz Usage Agreement</a></li>
+        </div>
+        <script src="//oss.maxcdn.com/libs/jquery/1.10.2/jquery.min.js"></script>
+        <script src="//oss.maxcdn.com/libs/twitter-bootstrap/3.0.3/js/bootstrap.min.js"></script>
+      </div>
+  </body>
+</html>

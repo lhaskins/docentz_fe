@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<body>
+<canvas id="bracketField"></canvas>
+
+<script type="text/javascript" src="mybracket.js">
+<!-- to hide script contents from old browsers end hiding contents from old browsers  -->
+</script>
+
+<div tal:repeat="school_pair python:brackets[0]">
+ <script type="text/javascript">
+   var ctx = document.getElementById("bracketField").getContext("2d");
+
+window.onload = function() {
+   m1 = new MatchUp(${school_pair[0]},${school_pair[1]});
+   m1.draw(ctx,1);
+}
+  </script>
+</div>
+
+<div tal:repeat="school_pair python:brackets[1]">
+ <script type="text/javascript">
+   var ctx = document.getElementById("bracketField").getContext("2d");
+
+window.onload = function() {
+   m1 = new MatchUp("Georgia Tech","University of Maryland");
+   m1.draw(ctx,1);
+}
+  </script>
+</div>
+</body>
+</html>

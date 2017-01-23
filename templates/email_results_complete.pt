@@ -1,0 +1,79 @@
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:tal="http://xml.zope.org/namespaces/tal"
+      xmlns:metal="http://xml.zope.org/namespaces/metal">
+  <head>
+    <style>body { width: 100%; background: #dedee0; }
+           .outer-table { width: 600px;
+                          position: relative; 
+                          border-collapse: collapse;
+                          border: none; }
+           .outer-table .banner td { height: 60px;
+                          background: #3d3e40;
+                          color:#dedee0;
+                          padding-top:10px;
+                          padding-left:10px;
+                          border:none;
+                          border-bottom:1px solid #228b22;
+                          font-family:Georgia,sans-serif; }
+           .outer-table .email-body td {
+                          background: #ffffff;
+                          color:#21211f;
+                          padding-top:10px;
+                          padding-left:10px;
+                          padding-bottom:30px;
+                          border:none;
+                          font-family:Georgia,sans-serif; }
+           .inner-table { width: 100%;
+                          background: #dedee0; }
+    </style>
+  </head>
+
+  <body>
+    <div style="width: 600px; margin: 0 auto;">
+      <table class="outer-table">
+        <tr>
+          <!--td class="banner"-->
+          <td style="height:60px; background:#3d3e40; color:#dedee0; border:none; border-bottom:1px solid #228b22; font-weight:100; font-family:Georgia,sans-serif; padding-left:10px;">
+            <img alt="Docentz" style="position:relative;right:5px;" src="cid:docentz.png@docentz"/><span style="color:#d2691e;font-weight:bold;">Docentz</span><i style="color:#4cc417; font-size:12px">beta</i> School Bracket Results for <span tal:content="structure student_name">Student</span>
+          </td>
+        </tr>
+        <tr>
+          <!--td class="email-body"-->
+          <td style="background:#ffffff; padding-top:10px; padding-left:10px; padding-bottom:30px; border:none; color:#21211f;font-family:Georgia,sans-serif; ">
+
+Hello, <span tal:content="structure first_name">Student</span>! <br/><br/> Your personalized school bracket has been generated. Please click here to see the results and narrow down your results by choosing between the schools, two at a time. 
+<br/> <a style="color:#228b22;" href="link" tal:attributes="href result_link;">School Bracket</a>
+
+            <!--table style="width:400px; margin:15px auto;color:#21211f; font-size:11px;"-->
+            <table style="width:400px; margin:15px auto; color:#228b22; font-size:11px;font-family:Georgia,sans-serif;">
+              <tr>
+                <td style="background:#b3b3b5;color:#303133;font-weight:bold;padding-left:10px;">Divisions:</td>
+                <td style="background:#dedee0;color:#f88017;font-weight:100;padding-right:10px; text-align:right;">
+                <span tal:content="structure divisions">selected_division</span>
+                </td>
+              </tr>
+              <tr>
+                <td style="background:#b3b3b5;color:#303133;font-weight:bold;padding-left:10px;">States Selected:</td>
+                <td style="background:#dedee0;color:#f88017;font-weight:100;padding-right:10px; text-align:right;">
+                <span tal:content="structure states">selected_states</span>
+                </td>
+              </tr>
+              <tr>
+                <td style="background:#b3b3b5;color:#303133;font-weight:bold;padding-left:10px;">Possible Majors:</td>
+                <td style="background:#dedee0;color:#f88017;font-weight:100;padding-right:10px; text-align:right;">
+                <span tal:content="structure majors">selected_majors</span>
+                </td>
+              </tr>
+            </table>
+Let us know if you have any questions or have recieved this email in error.
+<br/>
+<br/>
+Sincerely, <br/>
+Docentz.com <br/>
+"Guiding student athletes towards a better future."
+          </td>
+        </tr>
+      </table>
+    </div>
+  </body>
+</html>

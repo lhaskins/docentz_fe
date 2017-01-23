@@ -1,0 +1,101 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+        "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html lang="${request.locale_name}" xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="collegiate selection assistance">
+    <meta name="author" content="college university guidance student athlete match scholarship selection">
+    <meta name='keywords' content='sports, athlete, college, university, academics, ' />
+    <link rel="shortcut icon" href="${request.static_url('cosa:static/docentz.jpg')}">
+
+    <title>Docentz - About Us</title>
+
+    <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+    <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+    <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+
+    <!--link href="//oss.maxcdn.com/libs/twitter-bootstrap/3.0.3/css/bootstrap.min.css" rel="stylesheet"-->
+    <link href="${request.static_url('cosa:static/theme.css')}" rel="stylesheet">
+  <style type='text/css'>
+  .banner { background-color: #3d3e40;
+            margin:0;
+            padding:0;
+            width: 100%;
+            display: inline-block; }
+  </style>
+
+  </head>
+
+  <body>
+    <div class="banner" style="margin:0;padding:0">
+      <h2 style="padding-bottom:20px;">
+        <center>
+          <a href="/">
+            <img style="width:25%;height:25%;margin:0;padding:0" class="logo img-responsive" src="${request.static_url('cosa:static/small_docentz.png')}">
+          </a>
+          <span style="color:#f88017"><b>Docentz</b><i style="color:#4cc417; font-size:12px">beta</i> - Usage Agreement</span>
+        </center>
+      </h2>
+    </div>
+
+    <div class="body-template container-fluid">
+      <div class="row">
+          <div class="content">
+            <p class="lead">
+
+Docentz provides a list of schools using a special algorithm based on the answers given to the Docentz questionaire. This list of schools is a best guess of what colleges would fit the student's sport and scholastic interests. The school list should be used as a guide in helping the student and their parents have a better informed list of options. The Docentz school list can also be used when preparing the student for the coach conversations during the student-athlete recruiting process.
+<br/>
+<br/>
+The Docentz school bracket format is for assisting students and their families with narrowing down the potential school choices. 
+<br/>
+<br/>
+Docentz uses publicly available school and conference data that they have at their disposal. We strongly suggest that students augment their decisions through school visits, etc. with the help and advice of their parents and guardians.
+<br/>
+<br/>
+Docentz cannot and does not guarantee the admission to or satisfaction with programs of a particular school. 
+<br/>
+Docentz cannot and does not guarantee the offer of scholarships to programs of a particular school. 
+<br/>
+Docentz does not have any influence on school admission officers or others related to the admission process.
+<br/>
+Docentz does not offer assistance with writing essays or filling out applications forms. 
+<br/>
+<br/>
+Docentz would appreciate a notification of intent to accept or decline offers of scholarship/admission. 
+<br/>
+<br/>
+By using Docentz, all parties agree that the student athlete colligate recommendations are provided on a best effort basis, as a result of evaluations of the student’s needs, interests and abilities and are based on accuracy of information submitted by the student and materials available from schools. 
+<br/>
+<br/>
+Docentz does not accept compensation from any institutions for placement of the client.
+</p>
+  <p style="margin:30px;color:#f88017;font-size:30px">Contact Us</p>
+  <p class="lead">
+If you have any questions or comments concerning us or our product, please feel free to contact us at <a href="mailto:contact.docentz@gmail.com" target="_top">contact.docentz@gmail.com</a>
+  </p>
+ </div>
+</div>
+  <div class="push"></div>
+</div>
+
+<div class="footer-template container-fluid">
+  <div class="links">
+    <ul>
+      <li><i class="glyphicon glyphicon-home icon-muted"></i><a href="/">Home</a></li>
+      <li><i class="fa fa-university icon-muted"></i><a href="/questionaire">Questionaire</a></li>
+      <li><i class="glyphicon glyphicon-bookmark icon-muted"></i><a href="/helpful-links">Helpful Links</a></li>
+      <li><i class="fa fa-twitter icon-muted"></i><a href="http://www.twitter.com/docentz">Twitter</a></li>
+      <li><i class="glyphicon glyphicon-globe icon-muted"></i><a href="/about-us">About Docentz</a></li>
+      <li><i class="glyphicons glyphicons-handshake icon-muted"></i><a href="/agreement">Docentz Usage Agreement</a></li>
+    </ul>
+  </div>
+
+  <script src="//oss.maxcdn.com/libs/jquery/1.10.2/jquery.min.js"></script>
+  <script src="//oss.maxcdn.com/libs/twitter-bootstrap/3.0.3/js/bootstrap.min.js"></script>
+</div>
+
+  </body>
+</html>

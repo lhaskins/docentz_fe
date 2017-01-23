@@ -1,0 +1,590 @@
+
+<!DOCTYPE html>
+<html xmlns:fb="http://www.facebook.com/2008/fbml">
+<head><script src="http://sports-ak.espn.go.com/sports/optimizely.js"></script><meta charset="iso-8859-1">
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+<script type="text/javascript">    
+    if(true && navigator && navigator.userAgent.toLowerCase().indexOf("teamstream") >= 0) {
+        window.location = 'http://a.m.espn.go.com/mobilecache/general/apps/sc';
+    }
+</script><script type="text/javascript">
+var espn=window.espn||{};espn.beta=function(a,b,c){function d(b){var d,e,g,h,i,m,n,o,p;if(b!==c&&(k=b,d=b.match(/http:\/\/([^\/]*)([^?]*).*/),d&&3===d.length&&(l=d[2])),l.match(/\/story$/i)||l.match(/\/story\//i))return h=f("storyId",b)||f("id",b),i=f("storyPage",b)||f("page",b),""!==h?j+l+"/_/id/"+h:""!==i?i.indexOf("/")>-1?j+l+"?page="+i:j+l+"/_/page/"+i:j+l;if(l.match(/\/blogpostindex$/i)){if(e=f("blogname",b),a.espn&&espn.GLOBALS&&espn.GLOBALS.isCEBlog===!0)return;if(""!==e)return j+"/blog/"+e}if(l.match(/\/blogpost$/i)){if(e=f("blogname",b),g=f("id",b),a.espn&&espn.GLOBALS&&espn.GLOBALS.isCEBlog===!0)return;if(""!==e&&""!==g)return j+"/blog/"+e+"/post/_/id/"+g}if(l.match(/^\/blog\//i)){if(e=f("blogName",b),g=f("id",b),!l.match(/\/blog\/.*\/post$/i))return""!==e&&""!==g?j+"/blog/"+e+"/post/_/id/"+g:""!==e?j+"/blog/"+e:j+l;if(""!==g)return j+l+"/_/id/"+g}if(!(""!==l&&"/"!==l||k.match(/^https?:\/\/insider\.espn\.go\.com/i)||k.match(/^https?:\/\/search\.espn\.go\.com/i)))return j;var q=l.match(/^\/.*?\/(?:index)?$/i);if(q&&(m={"/frontpage/":!0,"/wireless/":!0,"/general/":!0,"/extra/":!0,"/mobile/":!0,"/nfl/":!0,"/nba/":!0,"/mlb/":!0,"/nhl/":!0,"/ncf/":!0,"/college-football/":!0,"/ncb/":!0,"/mens-college-basketball/":!0,"/ncw/":!0,"/womenbb/":!0,"/womens-basketball/":!0,"/wnba/":!0,"/golf/":!0,"/tennis/":!0,"/general/tennis/":!0,"/mma/":!0,"/extra/mma/":!0,"/racing/":!0,"/rpm/":!0,"/racing/nascar/":!0,"/rpm/nascar/":!0,"/boxing/":!0,"/extra/boxing/":!0,"/college-sports/":!0,"/ncaa/":!0,"/extra/ncaa/":!0,"/olympics/":!0,"/extra/olympics/":!0,"/horse-racing/":!0,"/horse/":!0,"/general/horse/":!0,"/poker/":!0,"/general/poker/":!0,"/sports/endurance/":!0,"/extra/endurance/":!0},l.match(/\/index$/i)&&(l=l.substring(0,l.length-5)),m[l]===!0))return j+l;if((l.match(/\/nflpreview$/i)||l.match(/\/preview$/i))&&(n=f("gameId",b),""!==n))return l.match(/\/nflpreview$/i)?j+"/nfl/preview?gameId="+n:j+l+"?gameId="+n;if(l.match(/\/recap$/i)&&(n=f("gameId",b),""!==n))return j+l+"?gameId="+n;if("/general/video"===l){if(o=f("cid",b),p=f("vid",b),""!==o)return j+"/video/clip?id="+o;if(""!==p)return j+"/video/clip?id="+p}return l.match(/^\/(?:videohub\/video|video)\/clip$/i)&&(o=f("id",b),""!==o)?j+l+"?id="+o:void 0}function e(a){var b=d(a),c=k.match(/^https?:\/\/insider\.espn\.go\.com/i)||a&&a.match(/^https?:\/\/insider\.espn\.go\.com/i)||espn&&espn.GLOBALS&&espn.GLOBALS.isPremium;return b&&(b=b.replace("/wireless/","/"),b=b.replace("/general/","/"),b=b.replace("/extra/","/"),b=b.replace("/mobile/","/"),b=b.replace("/frontpage/","/"),b=b.replace("/videohub/","/"),b=b.replace("/ncf/","/college-football/"),b=b.replace("/rpm/","/racing/"),b=b.replace("/ncb/","/mens-college-basketball/"),b=b.replace("/ncw/","/womens-basketball/"),b=b.replace("/wnba/","/womens-basketball/"),b=b.replace("/ncaa/","/college-sports/"),c&&(b=b.replace("/story/","/insider/story/"),b=b.replace("/post/","/insider/post/"),b.match(/\/blog\/[^_]*$/i)&&(b+="/"===b.charAt(b.length-1)?"insider/":"/insider/"))),b}function f(a,b){var d=location.search;if(b!==c){var e=b.indexOf("?");e>-1&&(d=b.substr(e))}a=a.replace(/[\[]/,"\\[").replace(/[\]]/,"\\]");var f=new RegExp("[\\?&]"+a+"=([^&#]*)"),g=f.exec(d);return null===g?"":decodeURIComponent(g[1].replace(/\+/g," "))}function g(){var b=h("betauser"),c=h("betacohort")||"";if(null!==b&&0===c.indexOf("cohort-")){var d=c.split("-");if(d&&2===d.length&&999===parseInt(d[1],10))return;var f=e();f&&(a.location=f)}}function h(a){for(var c=a+"=",d=b.cookie.split(";"),e=0;e<d.length;e++){for(var f=d[e];" "===f.charAt(0);)f=f.substring(1,f.length);if(0===f.indexOf(c))return f.substring(c.length,f.length)}return null}function i(){"beta"===f("rand")?espn.beta.recheck=!0:g()}var j="http://beta.espn.go.com",k=a.location.href,l=b.location.pathname;return{init:function(){i()},test:function(a){return e(a)}}}(this,this.document),espn.beta.init();
+</script><title>2014 NCAA Tournament Bracket - March Madness Tournament Brackets - ESPN</title>
+<meta name="google-site-verification" content="xuj1ODRluWa0frM-BjIr_aSHoUC7HB5C1MgmYAM_GkA" />
+<meta name="msvalidate.01" content="B1FEB7C682C46C8FCDA3130F3D18AC28" />
+<meta name="googlebot" content="noodp" />
+<meta name="robots" content="index, follow" />
+<meta name="description" content="View, download, and print up-to-the-minute NCAA Tournament brackets on ESPN.com" />
+<meta name="keywords" content="NCAA Tournament bracket, 2014 NCAA Tournament bracket, march madness brackets, march madness bracket" />
+<meta property="fb:app_id" content="116656161708917">
+<meta property="og:site_name" content="ESPN.com">
+<meta name="apple-itunes-app" content="app-id=359891723"/><link rel="canonical" href="http://espn.go.com/mens-college-basketball/tournament/bracket/2014-ncaa-mens-final-4-tournament" />
+
+		<script>var _sf_startpt=(new Date()).getTime();</script>
+<link rel="search" type="application/opensearchdescription+xml" href="http://a.espncdn.com/search/opensearch.xml" title="ESPN Search" />
+<link rel="stylesheet" href="http://a.espncdn.com/combiner/c/201401211964?css=global_reset.r1.css,base.r236.css,modules.r462.css,global_header.r44.css,header_topbar.r1.css,modules/global_nav.r54.css,modules/insider_enhanced.r1.css,modules/mem/mem.r12.1.css,modules/mem/mem_espn360.r8.4.css,modules/mem/skirmish.r8.css,modules/twin.r1.css,modules/facebook/button.r2.css,universal_overlay/universal_overlay.css,universal_overlay/media_overlay.css,universal_overlay/video_overlay.css,universal_overlay/photo_overlay.css,universal_overlay/dyk_overlay.css,fonts/bentonsans.css" type="text/css" media="screen" charset="utf-8" />
+<link rel="stylesheet" href="http://a.espncdn.com/combiner/c/201303290924?css=sprites/teamlogos.r18.css" type="text/css" media="screen" charset="utf-8" />
+<link rel="stylesheet" href="http://a.espncdn.com/combiner/c/20120509326?css=pagetype/tier3.r10.css" type="text/css" media="screen" charset="utf-8" />
+<link rel="stylesheet" href="http://a.espncdn.com/prod/styles/tier3/tier3_ncb.css" type="text/css" media="screen" charset="utf-8" />
+<link rel="stylesheet" href="http://a.espncdn.com/i/ncb/ncaatourney14/style.r2.css" type="text/css" media="screen" charset="utf-8" />
+<link rel="stylesheet" href="http://a.espncdn.com/combiner/c/20120509325?css=modules/master_tables_09.r3.css" type="text/css" media="screen" charset="utf-8" />
+<link rel="stylesheet" href="http://a.espncdn.com/css/ncb/bracket08.css" type="text/css" media="screen" charset="utf-8" />
+<link rel="stylesheet" href="http://a.espncdn.com/i/ncb/ncaatourney10/tourney10.css" type="text/css" media="screen" charset="utf-8" />
+<link rel="stylesheet" href="http://a.espncdn.com/i/ncb/ncaatourney11/playingames11.css" type="text/css" media="screen" charset="utf-8" />
+<link rel="stylesheet" href="http://a.espncdn.com/i/ncb/ncaatourney12/tourney12.css" type="text/css" media="screen" charset="utf-8" />
+<script type="text/javascript">
+var _vrq = _vrq || [];
+ _vrq.push(['id', 489]);
+ _vrq.push(['automate', false]);
+ _vrq.push(['track', function(){}]);
+ (function(d, a){var s = d.createElement(a),x = d.getElementsByTagName(a)[0];
+s.async = true;
+s.src = 'http://a.visualrevenue.com/vrs.js';
+ x.parentNode.insertBefore(s, x);})(document, 'script'); </script>
+<script src="http://a.espncdn.com/combiner/c?js=jquery-1.7.1.js,plugins/json2.r3.js,plugins/teacrypt.js,plugins/jquery.metadata.js,plugins/jquery.bgiframe.r3.js,plugins/jquery.easing.1.3.js,plugins/jquery.hoverIntent.js,plugins/jquery.jcarousel.0.2.9.js,plugins/jquery.tinysort.r4.js,plugins/jquery.pubsub.r5.js,ui/1.8.16/jquery.ui.core.js,ui/1.8.16/jquery.ui.widget.js,ui/1.8.16/jquery.ui.tabs.js,ui/1.8.16/jquery.ui.accordion.js,plugins/ba-debug-0.4.js,espn.l10n.r12.js,swfobject/2.2/swfobject.js,flashObjWrapper.r7.js,plugins/jquery.colorbox.1.3.14.js,plugins/jquery.ba-postmessage.js,espn.core.duo.r57.js,m/beta/betacheck.r5.js,espn.mem.r39.js,stub.search.r9.js,espn.nav.mega.r38b.js,espn.storage.r6.js,espn.p13n.r20.js,espn.geo.r3.js,espn.video.r81.r5.js,analytics/chartbeat/video/strategy_comprehensive.r1.js,registration/staticLogin.r12.06102014.js,espn.universal.overlay.r19.js,insider/espn.insider.20140915.js,espn.espn360.stub.r9.js,espn.myHeadlines.stub.r16.js,espn.myfaves.stub.r3.js,tsscoreboard.20090612.js,ie9pinning.r3.js,espn.f8.noauth.r3.js,espn.socialmediamod.r7.js"></script>
+<script>espn.core.navVersion = 'a';</script>
+<script>var ad_site="espn.us.com.ncb",ad_zone="ncaatourney14",ad_kvps="pgtyp=ncaatourney14bracket;sp=ncb;",ad_swid="",ad_counter=1,ad_ord=Math.floor(9999999999*Math.random()),ad_seg="",ad_mnr=-1<document.cookie.indexOf("grif=1")?"t":"f",ad_ref="other",ref=document.referrer,refsMap={"facebook.com":"facebook","twitter.com|t.co":"twitter","plus.url.google.com|plus.google.com":"googleplus","google.com":"google","bing.com":"bing","yahoo.com":"yahoo","espn.go.com":"espn"},refKey;for(refKey in refsMap)ref.match(refKey)&&(ad_ref=refsMap[refKey]);
+ad_kvps=ad_kvps+"ref="+ad_ref+";mnr="+ad_mnr+";";ad_swid=jQuery.cookie("SWID");"function"===typeof espn.core.ad_segments&&(ad_seg=espn.core.ad_segments(),null!=ad_seg&&""!=ad_seg&&(ad_kvps+=ad_seg));var ad_u="";null!=ad_swid&&""!=ad_swid&&(ad_u="swid="+ad_swid+";");</script>
+</head>
+<body class="ncb tier3 tier3-standard" >
+<div class="mboxDefault"><link rel="stylesheet" charset="utf-8" media="screen" href="http://a.espncdn.com/prod/styles/modules/hideGravity.css" type="text/css" /></div><script>mboxCreate('ESPN_global');</script><!--[if IE 5]><div class="ie5"><![endif]-->
+<!--[if IE 6]><div class="ie ie6"><![endif]-->
+<!--[if IE 7]><div class="ie ie7"><![endif]-->
+<!--[if IE 8]><div class="ie ie8"><![endif]-->
+<!--[if IE 9]><div class="ie9"><![endif]-->
+<!-- begin bg-elements -->
+<div class="bg-elements">
+<!-- begin header -->
+<div id="header" class="container">
+<!-- begin top-bar -->
+<div class="top-bar">
+<!-- begin uni login -->
+<script type="text/javascript">
+var returnURL = document.location.href;
+var anCV = "";
+var myEspnText = {'welcometext':'Welcome','register':'Register','signin':'Sign In','signout':'Sign Out','heliumdown':'Login Temporarily Unavailable','connectedfacebook':'Connected to Facebook','connectfacebook':'Connect with Facebook','activateinsider':'Activate Insider'};
+</script>
+<form id="form-memberarea">
+<input type="hidden" name="language" id="language" value="en"/>
+<input type="hidden" name="affiliateName" id="memberAreaAffiliateName" value="espn"/>
+<input type="hidden" name="regFormId" id="regFormId" value="espn"/>
+</form>
+<div class="signin" id="signin"></div>
+<script>espn.memberservices.welcome();</script>
+<div class="nav-edition editions">
+<label>EDITIONS:</label>
+<ul class="main">
+	<li class="e-usa active"><a href="http://espn.go.com/" name="&amp;lpos=editionsnav&amp;lid=usa">USA</a></li>
+	<li class="e-deportes"><a href="http://www.espn.com?country-view=us&lang-view=es" name="&amp;lpos=editionsnav&amp;lid=deportes" class="{langPref:'spanish'}">DEPORTES</a></li>
+	<li class="last dropdown">
+	<ul class="">
+	<li class="selected">More</li>
+        <li><a href="http://www.espn.com?country-view=ar&lang-view=es" name="&amp;lpos=editionsnav&amp;lid=argentina">Argentina</a></li>
+	<li><a href="http://www.espn.com.au" name="&amp;lpos=editionsnav&amp;lid=australia">Australia</a></li>
+	<li><a href="http://www.espn.com.br" name="&amp;lpos=editionsnav&amp;lid=brazil">Brazil</a></li>
+        <li><a href="http://www.espn.com?country-view=co&lang-view=es" name="&amp;lpos=editionsnav&amp;lid=colombia">Colombia</a></li>
+        <li><a href="http://www.espn.com?country-view=mx&lang-view=es" name="&amp;lpos=editionsnav&amp;lid=mexico">Mexico</a></li>
+	<li><a href="http://www.espn.co.uk/" name="&amp;lpos=editionsnav&amp;lid=uk">United Kingdom</a></li>
+        <li><a href="http://www.espn.com?country-view=ve&lang-view=es" name="&amp;lpos=editionsnav&amp;lid=venezuela">Venezuela</a></li>
+	</ul>
+	</li>
+</ul>
+</div>
+
+<div class="nav-edition">
+<label>CITIES:</label>
+<ul class="main">
+	<li class="e-boston"><a href="http://espn.go.com/boston/" name="&amp;lpos=citynav&amp;lid=boston">BOSTON</a></li>
+	<li class="e-chicago"><a href="http://espn.go.com/chicago/" name="&amp;lpos=citynav&amp;lid=chicago">CHICAGO</a></li>
+	<li class="e-dallas"><a href="http://espn.go.com/dallas/" name="&amp;lpos=citynav&amp;lid=dallas">DALLAS</a></li>
+	<li class="e-losangeles"><a href="http://espn.go.com/los-angeles/" name="&amp;lpos=citynav&amp;lid=losangeles">LOS ANGELES</a></li>
+	<li class="last e-newyork"><a href="http://espn.go.com/new-york/" name="&amp;lpos=citynav&amp;lid=newyork">NEW YORK</a></li>
+</ul>
+</div>
+</div>
+<!-- end top-bar -->
+<!-- begin espn-logo -->
+<div class="espn-logo">
+<div class="h1"><a href="http://espn.go.com/" name="&lpos=sitenavdefault&lid=sitenav_main-logo" class="espn">ESPN</a> <a href="http://espn.go.com/mens-college-basketball/" class="section-title">Men's Basketball</a></div></div>
+<!-- end espn-logo -->
+<!-- begin ad -->
+<span class="presby"><!--espn.us.com.ncb sitezone--><!--http://ad.Doubleclick.net hostUrl-->
+<script>if("undefined"!=typeof ad_kvps&&"undefined"!=typeof ad_u&&"undefined"!=typeof ad_counter&&"undefined"!=typeof ad_ord){if("undefined"==typeof ad_site||"undefined"==typeof ad_zone)var ad_site="espn.us.com.ncb",ad_zone="ncaatourney14";var ad_finalString="http://ad.Doubleclick.net/adj/"+ad_site+"/"+ad_zone+";"+ad_kvps+"pos=SponsoredByLogoHeader;"+ad_u+"sz=150x45,1x1;tile="+ad_counter+";ord="+ad_ord;document.write('<div data-cb-ad-id="SponsoredByLogoHeader" data-cb-dfp-id="'+ad_kvps+'sz=150x45,1x1"><script src='+ad_finalString+'>\x3c/script></div>');ad_counter++};</script>
+<noscript><a href="http://ad.Doubleclick.net/jump/espn.us.com.ncb/ncaatourney14;pgtyp=ncaatourney14bracket;sp=ncb;sz=150x45,1x1;" target="_blank"><img src="http://ad.Doubleclick.net/ad/espn.us.com.ncb/ncaatourney14;pgtyp=ncaatourney14bracket;sp=ncb;sz=150x45,1x1;" border="0" alt=""></a></noscript>
+</span>
+<!-- end ad -->
+<div class="header-right">
+<style>.ie6 #searchBox, .ie6 #searchBox div { display: inline; } </style><!-- begin search -->
+<div id="nav-main-search">
+<form id="searchBox" name="searchBox" action="http://search.espn.go.com/results" method="get" accept-charset="utf-8" style="color: #999999;">
+<div class="clearfix">
+<input autocomplete="off" class="text" type="text" placeholder="Search" name="searchString" id="searchString" />
+<input type="hidden" name="page" id="page" value="null" />
+<input type="hidden" name="fromForm" value="true" />
+<input class="submit" type="submit" value="" />
+</div>
+</form>
+</div>
+<!-- end search -->
+<div id="shop"><a class="shop-btn" href="http://www.dickssportinggoods.com/category/index.jsp?categoryId=15504456&camp=Part:ESPNpart::ncbshopbutton:NCB" name="&lpos=sitenavdefault&lid=sitenav_shopbutton" rel="nofollow">Shop</a></div></div>
+</div>
+<!-- end header -->
+<!--espn.us.com.ncb sitezone--><!--http://ad.Doubleclick.net hostUrl-->
+<script>if("undefined"!=typeof ad_kvps&&"undefined"!=typeof ad_u&&"undefined"!=typeof ad_counter&&"undefined"!=typeof ad_ord){if("undefined"==typeof ad_site||"undefined"==typeof ad_zone)var ad_site="espn.us.com.ncb",ad_zone="ncaatourney14";var ad_finalString="http://ad.Doubleclick.net/adj/"+ad_site+"/"+ad_zone+";"+ad_kvps+"pos=Background_Skin;"+ad_u+"sz=1280x946,200x800,1x1;tile="+ad_counter+";ord="+ad_ord;document.write('<div data-cb-ad-id="Background_Skin" data-cb-dfp-id="'+ad_kvps+'sz=1280x946,200x800,1x1"><script src='+ad_finalString+'>\x3c/script></div>');ad_counter++};</script>
+<noscript><a href="http://ad.Doubleclick.net/jump/espn.us.com.ncb/ncaatourney14;pgtyp=ncaatourney14bracket;sp=ncb;sz=1280x946,200x800,1x1;" target="_blank"><img src="http://ad.Doubleclick.net/ad/espn.us.com.ncb/ncaatourney14;pgtyp=ncaatourney14bracket;sp=ncb;sz=1280x946,200x800,1x1;" border="0" alt=""></a></noscript>
+<!-- begin subheader -->
+<div id="subheader">
+<!-- begin content -->
+<div id="content-wrapper">
+<div id="ad-top" class="container">
+<!-- begin Banner ad -->
+<div class="span-6 ad banner top"><div class="ad-center"><div class="ad-wrapper"><!--espn.us.com.ncb sitezone--><!--http://ad.Doubleclick.net hostUrl-->
+<script>if("undefined"!=typeof ad_kvps&&"undefined"!=typeof ad_u&&"undefined"!=typeof ad_counter&&"undefined"!=typeof ad_ord){if("undefined"==typeof ad_site||"undefined"==typeof ad_zone)var ad_site="espn.us.com.ncb",ad_zone="ncaatourney14";var ad_finalString="http://ad.Doubleclick.net/adj/"+ad_site+"/"+ad_zone+";"+ad_kvps+"pos=Banner;"+ad_u+"sz=728x90,970x66,924x50,1x1;tile="+ad_counter+";ord="+ad_ord;document.write('<div data-cb-ad-id="Banner" data-cb-dfp-id="'+ad_kvps+'sz=728x90,970x66,924x50,1x1"><script src='+ad_finalString+'>\x3c/script></div>');ad_counter++};</script>
+<noscript><a href="http://ad.Doubleclick.net/jump/espn.us.com.ncb/ncaatourney14;pgtyp=ncaatourney14bracket;sp=ncb;sz=728x90,970x66,924x50,1x1;" target="_blank"><img src="http://ad.Doubleclick.net/ad/espn.us.com.ncb/ncaatourney14;pgtyp=ncaatourney14bracket;sp=ncb;sz=728x90,970x66,924x50,1x1;" border="0" alt=""></a></noscript>
+</div></div></div>
+<!-- end Banner ad -->
+</div>
+<div id="content" class="container">
+<div id="fb-root"></div><!--[if lte IE 7]><link rel="stylesheet" charset="utf-8" media="screen" href="http://a.espncdn.com/combiner/c?css=modules/browser-alert.r7.css" type="text/css" /><div class="span-6" id="browser-alert-wrapper" style="display:none;"><div class="mod-container mod-no-header-footer browser-alert"><div class="mod-content"><div class="gradient-container"><h1><span>Your Web Browser</span> is no longer supported</h1><p>To experience everything that ESPN.com has to offer, we recommend that you upgrade to a newer version of your web browser. Click the upgrade button to the right or <a href="http://espn.go.com/espn/news/story?id=5630562">learn more</a>.</p><ul><li><a class="btn-upgrade" href="http://www.microsoft.com/windows/internet-explorer/default.aspx">Upgrade</a></li><li><a class="btn-faq" href="http://espn.go.com/espn/news/story?id=5630562">FAQs</a></li></ul></div></div></div></div><script>(function(b){setTimeout(function(){var a=b("#browser-alert-wrapper");if(espn.cookie.get("browseralert")!="true"){b('<a class="btn-close" href="#">Close</a>').bind("click",function(){a.hide();espn.cookie.set("browseralert","true",30);return false}).appendTo(a.find(".gradient-container"));a.show();espn.cookie.set("browseralert","true")}},100)})(jQuery);</script><![endif]--><div id="sub-branding"><h2 class="logo"><a href="http://espn.go.com/mens-college-basketball/tournament" class="sub-brand-title"><b>2014 NCAA Tournament -  March Madness - Men's NCAA Basketball Tournament</b></a></h2><div class="presby"><!--espn.us.com.ncb sitezone--><!--http://ad.Doubleclick.net hostUrl-->
+<script>if("undefined"!=typeof ad_kvps&&"undefined"!=typeof ad_u&&"undefined"!=typeof ad_counter&&"undefined"!=typeof ad_ord){if("undefined"==typeof ad_site||"undefined"==typeof ad_zone)var ad_site="espn.us.com.ncb",ad_zone="ncaatourney14";var ad_finalString="http://ad.Doubleclick.net/adj/"+ad_site+"/"+ad_zone+";"+ad_kvps+"pos=EnhancedLogo;"+ad_u+"sz=180x45,1x1;tile="+ad_counter+";ord="+ad_ord;document.write('<div data-cb-ad-id="EnhancedLogo" data-cb-dfp-id="'+ad_kvps+'sz=180x45,1x1"><script src='+ad_finalString+'>\x3c/script></div>');ad_counter++};</script>
+<noscript><a href="http://ad.Doubleclick.net/jump/espn.us.com.ncb/ncaatourney14;pgtyp=ncaatourney14bracket;sp=ncb;sz=180x45,1x1;" target="_blank"><img src="http://ad.Doubleclick.net/ad/espn.us.com.ncb/ncaatourney14;pgtyp=ncaatourney14bracket;sp=ncb;sz=180x45,1x1;" border="0" alt=""></a></noscript>
+</div></div>
+
+			<script type="text/javascript">
+				function toGamePage(gameId, status) {
+					var loc = {2:'boxscore',24:'boxscore',21:'boxscore',22:'boxscore',23:'boxscore',1:'preview',7:'preview',10:'preview',3:'recap',4:'recap',5:'recap',6:'recap',8:'recap',9:'recap'}
+					if (status != 0) {
+						location.href = "/ncb/" + loc[status] + "?id=" + gameId;
+					}
+				}
+			</script>
+
+			<style>
+				.article{ margin-bottom: 0 }
+				.bracket-box{ background-color: #fff; }
+				.round4 dl{ top: 100px; }
+				.pointer{ cursor: pointer; }
+				.brackethide{ display: none; }
+				.match dt { white-space: nowrap; }
+				#playingame1.top, #playingame2.top, #playingame3.top, #playingame4.top { top: 20px; }
+				.match dt { padding-left: 0; }
+				.pad-16.article { padding-bottom: 0; }
+			</style>
+
+<div class="span-6"><div class="bg-opaque pad-16 article"><div class="mod-article-title"><div class="headline"><h1 class="h2">NCAA Tournament Bracket - 2014</h1><div style="position: absolute; left: 705px; top: 0px;"><!--espn.us.com.ncb sitezone--><!--http://ad.Doubleclick.net hostUrl-->
+<script>if("undefined"!=typeof ad_kvps&&"undefined"!=typeof ad_u&&"undefined"!=typeof ad_counter&&"undefined"!=typeof ad_ord){if("undefined"==typeof ad_site||"undefined"==typeof ad_zone)var ad_site="espn.us.com.ncb",ad_zone="ncaatourney14";var ad_finalString="http://ad.Doubleclick.net/adj/"+ad_site+"/"+ad_zone+";"+ad_kvps+"pos=PresentedByLogo;"+ad_u+"sz=200x45,1x1;tile="+ad_counter+";ord="+ad_ord;document.write('<div data-cb-ad-id="PresentedByLogo" data-cb-dfp-id="'+ad_kvps+'sz=200x45,1x1"><script src='+ad_finalString+'>\x3c/script></div>');ad_counter++};</script>
+<noscript><a href="http://ad.Doubleclick.net/jump/espn.us.com.ncb/ncaatourney14;pgtyp=ncaatourney14bracket;sp=ncb;sz=200x45,1x1;" target="_blank"><img src="http://ad.Doubleclick.net/ad/espn.us.com.ncb/ncaatourney14;pgtyp=ncaatourney14bracket;sp=ncb;sz=200x45,1x1;" border="0" alt=""></a></noscript>
+</div></div><div class="subhead" style="margin: 10px 0 0;"><div class="floatleft"><a href="http://games.espn.go.com/tournament-challenge-bracket/2014/en/bracket"><img src="http://games.espn.go.com/banners/12/img/TCM12_tokensmall.jpg" class="floatleft" alt=""/></a> <div style="width: 200px;"><a href="http://games.espn.go.com/tournament-challenge-bracket/2014/en/bracket">Fill Out Your Bracket</a></div></div><div class="floatright">Printable brackets: <a href="http://a.espncdn.com/i/ncaa/14mens_bracket.gif" name="&amp;lpos=ncb_tourney_bracket&amp;lid=printable_bracket_gif">GIF</a> | <a href="http://a.espncdn.com/i/ncaa/14mens_bracket.pdf" name="&amp;lpos=ncb_tourney_bracket&amp;lid=printable_bracket_pdf">PDF</a></div></div></div></div><div class="bracket-box"><div class="content"><div style="border-right: 0px none #fff;" class="sp-col1"><div style="padding: 0pt 10px 5px;" class="sp-col1-inner"><div id="mc" style="height: 880px;"><ul id="roundheaders" style="margin: 0; border: none;"><li class="rh fl"><strong>2nd ROUND</strong>March 20-21</li><li class="rh fl"><strong>3rd ROUND</strong>March 22-23</li><li class="rh fl"><strong>SWEET 16</strong>March 27-28</li><li class="rh fl"><strong>ELITE EIGHT</strong>March 29-30</li><li class="rh fl"><strong>FINAL FOUR</strong>April 5</li><li class="rh fl"><strong>CHAMPION</strong>April 7</li><li class="rh fl"><strong>FINAL FOUR</strong>April 5</li><li class="rh fl"><strong>ELITE EIGHT</strong>March 29-30</li><li class="rh fl"><strong>SWEET 16</strong>March 27-28</li><li class="rh fl"><strong>3rd ROUND</strong>March 22-23</li><li class="rh fl"><strong>2nd ROUND</strong>March 20-21</li></ul><div id="bracket" style="margin-top: 0; border-style: none;"><div class="playingames"><div id="playingame1"><strong>First Round March 18</strong><br/><dl class="match winnertop"><dt><b>16 <a href="http://espn.go.com/mens-college-basketball/team/_/id/399/albany-great-danes" title="Albany">Albany</a></b><br/>16 <a href="http://espn.go.com/mens-college-basketball/team/_/id/116/mt.-st.-mary's-mountaineers" title="Mt. St. Mary's">Mount St Mary's</a></dt><dd class="pointer" onclick="toGamePage(400546938,3);">71<br/>64</dd></dl></div><div id="playingame2"><strong>First Round March 19</strong><br/><dl class="match winnertop"><dt><b>16 <a href="http://espn.go.com/mens-college-basketball/team/_/id/13/cal-poly-mustangs" title="Cal Poly">Cal Poly</a></b><br/>16 <a href="http://espn.go.com/mens-college-basketball/team/_/id/2640/texas-southern-tigers" title="Texas Southern">Texas Southern</a></dt><dd class="pointer" onclick="toGamePage(400546940,3);">81<br/>69</dd></dl></div><div id="playingame3"><strong>First Round March 18</strong><br/><dl class="match winnertop"><dt><b>12 <a href="http://espn.go.com/mens-college-basketball/team/_/id/152/nc-state-wolfpack" title="NC State">NC State</a></b><br/>12 <a href="http://espn.go.com/mens-college-basketball/team/_/id/2752/xavier-musketeers" title="Xavier">Xavier</a></dt><dd class="pointer" onclick="toGamePage(400546939,3);">74<br/>59</dd></dl></div><div id="playingame4"><strong>First Round March 19</strong><br/><dl class="match winnerbot"><dt>11 <a href="http://espn.go.com/mens-college-basketball/team/_/id/2294/iowa-hawkeyes" title="Iowa">Iowa</a><br/><b>11 <a href="http://espn.go.com/mens-college-basketball/team/_/id/2633/tennessee-volunteers" title="Tennessee">Tennessee</a></b></dt><dd class="pointer" onclick="toGamePage(400546941,3);">65<br/>78</dd></dl></div></div><div class="h1"><div class="region"><div class="venue v1">Orlando, FL</div><dl id="match1" class="match round1 winnertop"><dt><b>1 <a href="http://espn.go.com/mens-college-basketball/team/_/id/57/florida-gators" title="Florida">Florida</a></b><br/>16 <a href="http://espn.go.com/mens-college-basketball/team/_/id/399/albany-great-danes" title="Albany">Albany</a></dt><dd class="pointer" onclick="toGamePage(400546943,3);"><b>67</b><br/>55</dd></dl><dl id="match2" class="match round1 winnerbot"><dt>8 <a href="http://espn.go.com/mens-college-basketball/team/_/id/38/colorado-buffaloes" title="Colorado">Colorado</a><br/><b>9 <a href="http://espn.go.com/mens-college-basketball/team/_/id/221/pittsburgh-panthers" title="Pittsburgh">Pittsburgh</a></b></dt><dd class="pointer" onclick="toGamePage(400546916,3);">48<br/><b>77</b></dd></dl><div class="venue v2">San Diego, CA</div><dl id="match3" class="match round1 winnerbot"><dt>5 <a href="http://espn.go.com/mens-college-basketball/team/_/id/2670/virginia-commonwealth-rams" title="Virginia Commonwealth">VCU</a><br/><b>12 <a href="http://espn.go.com/mens-college-basketball/team/_/id/2617/stephen-f.-austin-lumberjacks" title="Stephen F. Austin">SF Austin</a></b></dt><dd class="pointer" onclick="toGamePage(400546917,3);">75<br/><b>77</b></dd></dl><dl id="match4" class="match round1 winnertop"><dt><b>4 <a href="http://espn.go.com/mens-college-basketball/team/_/id/26/ucla-bruins" title="UCLA">UCLA</a></b><br/>13 <a href="http://espn.go.com/mens-college-basketball/team/_/id/202/tulsa-golden-hurricane" title="Tulsa">Tulsa</a></dt><dd class="pointer" onclick="toGamePage(400546899,3);"><b>76</b><br/>59</dd></dl><div class="venue v3">Buffalo, NY</div><dl id="match5" class="match round1 winnerbot"><dt>6 <a href="http://espn.go.com/mens-college-basketball/team/_/id/194/ohio-state-buckeyes" title="Ohio State">Ohio State</a><br/><b>11 <a href="http://espn.go.com/mens-college-basketball/team/_/id/2168/dayton-flyers" title="Dayton">Dayton</a></b></dt><dd class="pointer" onclick="toGamePage(400546900,3);">59<br/><b>60</b></dd></dl><dl id="match6" class="match round1 winnertop"><dt><b>3 <a href="http://espn.go.com/mens-college-basketball/team/_/id/183/syracuse-orange" title="Syracuse">Syracuse</a></b><br/>14 <a href="http://espn.go.com/mens-college-basketball/team/_/id/2711/western-michigan-broncos" title="Western Michigan">W Michigan</a></dt><dd class="pointer" onclick="toGamePage(400546920,3);"><b>77</b><br/>53</dd></dl><div class="venue v4">St. Louis, MO</div><dl id="match7" class="match round1 winnerbot"><dt>7 <a href="http://espn.go.com/mens-college-basketball/team/_/id/167/new-mexico-lobos" title="New Mexico">New Mexico</a><br/><b>10 <a href="http://espn.go.com/mens-college-basketball/team/_/id/24/stanford-cardinal" title="Stanford">Stanford</a></b></dt><dd class="pointer" onclick="toGamePage(400546919,3);">53<br/><b>58</b></dd></dl><dl id="match8" class="match round1 winnertop"><dt><b>2 <a href="http://espn.go.com/mens-college-basketball/team/_/id/2305/kansas-jayhawks" title="Kansas">Kansas</a></b><br/>15 <a href="http://espn.go.com/mens-college-basketball/team/_/id/2198/eastern-kentucky-colonels" title="Eastern Kentucky">E Kentucky</a></dt><dd class="pointer" onclick="toGamePage(400546918,3);"><b>80</b><br/>69</dd></dl><dl id="match9" class="match round2 winnertop"><dt><b>1 <a href="http://espn.go.com/mens-college-basketball/team/_/id/57/florida-gators" title="Florida">Florida</a></b><br/>9 <a href="http://espn.go.com/mens-college-basketball/team/_/id/221/pittsburgh-panthers" title="Pittsburgh">Pittsburgh</a></dt><dd class="pointer" onclick="toGamePage(400548469,3);"><b>61</b><br/>45</dd></dl><dl id="match10" class="match round2 winnerbot"><dt>12 <a href="http://espn.go.com/mens-college-basketball/team/_/id/2617/stephen-f.-austin-lumberjacks" title="Stephen F. Austin">SF Austin</a><br/><b>4 <a href="http://espn.go.com/mens-college-basketball/team/_/id/26/ucla-bruins" title="UCLA">UCLA</a></b></dt><dd class="pointer" onclick="toGamePage(400548713,3);">60<br/><b>77</b></dd></dl><dl id="match11" class="match round2 winnertop"><dt><b>11 <a href="http://espn.go.com/mens-college-basketball/team/_/id/2168/dayton-flyers" title="Dayton">Dayton</a></b><br/>3 <a href="http://espn.go.com/mens-college-basketball/team/_/id/183/syracuse-orange" title="Syracuse">Syracuse</a></dt><dd class="pointer" onclick="toGamePage(400548467,3);"><b>55</b><br/>53</dd></dl><dl id="match12" class="match round2 winnertop"><dt><b>10 <a href="http://espn.go.com/mens-college-basketball/team/_/id/24/stanford-cardinal" title="Stanford">Stanford</a></b><br/>2 <a href="http://espn.go.com/mens-college-basketball/team/_/id/2305/kansas-jayhawks" title="Kansas">Kansas</a></dt><dd class="pointer" onclick="toGamePage(400548683,3);"><b>60</b><br/>57</dd></dl><div id="match13" class="match round3 winnertop"><dl><dt><b>1 <a href="http://espn.go.com/mens-college-basketball/team/_/id/57/florida-gators" title="Florida">Florida</a></b><br/>4 <a href="http://espn.go.com/mens-college-basketball/team/_/id/26/ucla-bruins" title="UCLA">UCLA</a></dt><dd class="pointer" onclick="toGamePage(400548873,3);"><b>79</b><br/>68</dd></dl></div><div id="match14" class="match round3 winnertop"><dl><dt><b>11 <a href="http://espn.go.com/mens-college-basketball/team/_/id/2168/dayton-flyers" title="Dayton">Dayton</a></b><br/>10 <a href="http://espn.go.com/mens-college-basketball/team/_/id/24/stanford-cardinal" title="Stanford">Stanford</a></dt><dd class="pointer" onclick="toGamePage(400548862,3);"><b>82</b><br/>72</dd></dl></div><div class="regtitle">SOUTH</div><div class="venue v5">Memphis, TN</div><div id="match15" class="match round4 winnertop"><dl><dt><b>1 <a href="http://espn.go.com/mens-college-basketball/team/_/id/57/florida-gators" title="Florida">Florida</a></b><br/>11 <a href="http://espn.go.com/mens-college-basketball/team/_/id/2168/dayton-flyers" title="Dayton">Dayton</a></dt><dd class="pointer" onclick="toGamePage(400549674,3);"><b>62</b><br/>52</dd></dl></div></div><div class="region"><div class="venue v1">Raleigh, NC</div><dl id="match16" class="match round1 winnertop"><dt><b>1 <a href="http://espn.go.com/mens-college-basketball/team/_/id/258/virginia-cavaliers" title="Virginia">Virginia</a></b><br/>16 <a href="http://espn.go.com/mens-college-basketball/team/_/id/324/coastal-carolina-chanticleers" title="Coastal Carolina">Coast Carolina</a></dt><dd class="pointer" onclick="toGamePage(400546932,3);"><b>70</b><br/>59</dd></dl><dl id="match17" class="match round1 winnertop"><dt><b>8 <a href="http://espn.go.com/mens-college-basketball/team/_/id/235/memphis-tigers" title="Memphis">Memphis</a></b><br/>9 <a href="http://espn.go.com/mens-college-basketball/team/_/id/45/george-washington-colonials" title="George Washington">G. Washington</a></dt><dd class="pointer" onclick="toGamePage(400546933,3);"><b>71</b><br/>66</dd></dl><div class="venue v2">Spokane, WA</div><dl id="match18" class="match round1 winnerbot"><dt>5 <a href="http://espn.go.com/mens-college-basketball/team/_/id/2132/cincinnati-bearcats" title="Cincinnati">Cincinnati</a><br/><b>12 <a href="http://espn.go.com/mens-college-basketball/team/_/id/108/harvard-crimson" title="Harvard">Harvard</a></b></dt><dd class="pointer" onclick="toGamePage(400546934,3);">57<br/><b>61</b></dd></dl><dl id="match19" class="match round1 winnertop"><dt><b>4 <a href="http://espn.go.com/mens-college-basketball/team/_/id/127/michigan-st-spartans" title="Michigan St">Michigan State</a></b><br/>13 <a href="http://espn.go.com/mens-college-basketball/team/_/id/48/delaware-blue-hens" title="Delaware">Delaware</a></dt><dd class="pointer" onclick="toGamePage(400546908,3);"><b>93</b><br/>78</dd></dl><div class="venue v3">San Antonio, TX</div><dl id="match20" class="match round1 winnertop"><dt><b>6 <a href="http://espn.go.com/mens-college-basketball/team/_/id/153/north-carolina-tar-heels" title="North Carolina">North Carolina</a></b><br/>11 <a href="http://espn.go.com/mens-college-basketball/team/_/id/2507/providence-friars" title="Providence">Providence</a></dt><dd class="pointer" onclick="toGamePage(400546909,3);"><b>79</b><br/>77</dd></dl><dl id="match21" class="match round1 winnertop"><dt><b>3 <a href="http://espn.go.com/mens-college-basketball/team/_/id/66/iowa-state-cyclones" title="Iowa State">Iowa State</a></b><br/>14 <a href="http://espn.go.com/mens-college-basketball/team/_/id/2428/north-carolina-central-eagles" title="North Carolina Central">N Carolina Cent</a></dt><dd class="pointer" onclick="toGamePage(400546937,3);"><b>93</b><br/>75</dd></dl><div class="venue v4">Buffalo, NY</div><dl id="match22" class="match round1 winnertop"><dt><b>7 <a href="http://espn.go.com/mens-college-basketball/team/_/id/41/connecticut-huskies" title="Connecticut">Connecticut</a></b><br/>10 <a href="http://espn.go.com/mens-college-basketball/team/_/id/2603/saint-joseph's-hawks" title="Saint Joseph's">Saint Joseph's</a></dt><dd class="pointer" onclick="toGamePage(400546936,3);"><b>89</b><br/>81</dd></dl><dl id="match23" class="match round1 winnertop"><dt><b>2 <a href="http://espn.go.com/mens-college-basketball/team/_/id/222/villanova-wildcats" title="Villanova">Villanova</a></b><br/>15 <a href="http://espn.go.com/mens-college-basketball/team/_/id/270/milwaukee-panthers" title="Milwaukee">Milwaukee</a></dt><dd class="pointer" onclick="toGamePage(400546935,3);"><b>73</b><br/>53</dd></dl><dl id="match24" class="match round2 winnertop"><dt><b>1 <a href="http://espn.go.com/mens-college-basketball/team/_/id/258/virginia-cavaliers" title="Virginia">Virginia</a></b><br/>8 <a href="http://espn.go.com/mens-college-basketball/team/_/id/235/memphis-tigers" title="Memphis">Memphis</a></dt><dd class="pointer" onclick="toGamePage(400548704,3);"><b>78</b><br/>60</dd></dl><dl id="match25" class="match round2 winnerbot"><dt>12 <a href="http://espn.go.com/mens-college-basketball/team/_/id/108/harvard-crimson" title="Harvard">Harvard</a><br/><b>4 <a href="http://espn.go.com/mens-college-basketball/team/_/id/127/michigan-st-spartans" title="Michigan St">Michigan State</a></b></dt><dd class="pointer" onclick="toGamePage(400548471,3);">73<br/><b>80</b></dd></dl><dl id="match26" class="match round2 winnerbot"><dt>6 <a href="http://espn.go.com/mens-college-basketball/team/_/id/153/north-carolina-tar-heels" title="North Carolina">North Carolina</a><br/><b>3 <a href="http://espn.go.com/mens-college-basketball/team/_/id/66/iowa-state-cyclones" title="Iowa State">Iowa State</a></b></dt><dd class="pointer" onclick="toGamePage(400548705,3);">83<br/><b>85</b></dd></dl><dl id="match27" class="match round2 winnertop"><dt><b>7 <a href="http://espn.go.com/mens-college-basketball/team/_/id/41/connecticut-huskies" title="Connecticut">Connecticut</a></b><br/>2 <a href="http://espn.go.com/mens-college-basketball/team/_/id/222/villanova-wildcats" title="Villanova">Villanova</a></dt><dd class="pointer" onclick="toGamePage(400548494,3);"><b>77</b><br/>65</dd></dl><div id="match28" class="match round3 winnerbot"><dl><dt>1 <a href="http://espn.go.com/mens-college-basketball/team/_/id/258/virginia-cavaliers" title="Virginia">Virginia</a><br/><b>4 <a href="http://espn.go.com/mens-college-basketball/team/_/id/127/michigan-st-spartans" title="Michigan St">Michigan State</a></b></dt><dd class="pointer" onclick="toGamePage(400548899,3);">59<br/><b>61</b></dd></dl></div><div id="match29" class="match round3 winnerbot"><dl><dt>3 <a href="http://espn.go.com/mens-college-basketball/team/_/id/66/iowa-state-cyclones" title="Iowa State">Iowa State</a><br/><b>7 <a href="http://espn.go.com/mens-college-basketball/team/_/id/41/connecticut-huskies" title="Connecticut">Connecticut</a></b></dt><dd class="pointer" onclick="toGamePage(400548879,3);">76<br/><b>81</b></dd></dl></div><div class="regtitle">EAST</div><div class="venue v5">New York, NY</div><div id="match30" class="match round4 winnerbot"><dl><dt>4 <a href="http://espn.go.com/mens-college-basketball/team/_/id/127/michigan-st-spartans" title="Michigan St">Michigan State</a><br/><b>7 <a href="http://espn.go.com/mens-college-basketball/team/_/id/41/connecticut-huskies" title="Connecticut">Connecticut</a></b></dt><dd class="pointer" onclick="toGamePage(400549858,3);">54<br/><b>60</b></dd></dl></div></div></div><div class="h2"><div class="region"><div class="venue v1">San Diego, CA</div><dl id="match1" class="match round1 winnertop"><dt><b>1 <a href="http://espn.go.com/mens-college-basketball/team/_/id/12/arizona-wildcats" title="Arizona">Arizona</a></b><br/>16 <a href="http://espn.go.com/mens-college-basketball/team/_/id/2692/weber-state-wildcats" title="Weber State">Weber State</a></dt><dd class="pointer" onclick="toGamePage(400546921,3);"><b>68</b><br/>59</dd></dl><dl id="match2" class="match round1 winnertop"><dt><b>8 <a href="http://espn.go.com/mens-college-basketball/team/_/id/2250/gonzaga-bulldogs" title="Gonzaga">Gonzaga</a></b><br/>9 <a href="http://espn.go.com/mens-college-basketball/team/_/id/197/oklahoma-st-cowboys" title="Oklahoma St">Oklahoma St</a></dt><dd class="pointer" onclick="toGamePage(400546922,3);"><b>85</b><br/>77</dd></dl><div class="venue v2">Spokane, WA</div><dl id="match3" class="match round1 winnerbot"><dt>5 <a href="http://espn.go.com/mens-college-basketball/team/_/id/201/oklahoma-sooners" title="Oklahoma">Oklahoma</a><br/><b>12 <a href="http://espn.go.com/mens-college-basketball/team/_/id/2449/north-dakota-st-bison" title="North Dakota St">North Dakota St</a></b></dt><dd class="pointer" onclick="toGamePage(400546923,3);">75<br/><b>80</b></dd></dl><dl id="match4" class="match round1 winnertop"><dt><b>4 <a href="http://espn.go.com/mens-college-basketball/team/_/id/21/san-diego-st-aztecs" title="San Diego St">San Diego State</a></b><br/>13 <a href="http://espn.go.com/mens-college-basketball/team/_/id/166/new-mexico-st-aggies" title="New Mexico St">New Mexico St</a></dt><dd class="pointer" onclick="toGamePage(400546901,3);"><b>73</b><br/>69</dd></dl><div class="venue v3">San Antonio, TX</div><dl id="match5" class="match round1 winnertop"><dt><b>6 <a href="http://espn.go.com/mens-college-basketball/team/_/id/239/baylor-bears" title="Baylor">Baylor</a></b><br/>11 <a href="http://espn.go.com/mens-college-basketball/team/_/id/158/nebraska-cornhuskers" title="Nebraska">Nebraska</a></dt><dd class="pointer" onclick="toGamePage(400546902,3);"><b>74</b><br/>60</dd></dl><dl id="match6" class="match round1 winnertop"><dt><b>3 <a href="http://espn.go.com/mens-college-basketball/team/_/id/156/creighton-bluejays" title="Creighton">Creighton</a></b><br/>14 <a href="http://espn.go.com/mens-college-basketball/team/_/id/309/ul-lafayette-ragin'-cajuns" title="UL Lafayette">LA-Lafayette</a></dt><dd class="pointer" onclick="toGamePage(400546926,3);"><b>76</b><br/>66</dd></dl><div class="venue v4">Milwaukee, WI</div><dl id="match7" class="match round1 winnertop"><dt><b>7 <a href="http://espn.go.com/mens-college-basketball/team/_/id/2483/oregon-ducks" title="Oregon">Oregon</a></b><br/>10 <a href="http://espn.go.com/mens-college-basketball/team/_/id/252/byu-cougars" title="BYU">BYU</a></dt><dd class="pointer" onclick="toGamePage(400546925,3);"><b>87</b><br/>68</dd></dl><dl id="match8" class="match round1 winnertop"><dt><b>2 <a href="http://espn.go.com/mens-college-basketball/team/_/id/275/wisconsin-badgers" title="Wisconsin">Wisconsin</a></b><br/>15 <a href="http://espn.go.com/mens-college-basketball/team/_/id/44/american-eagles" title="American">American U</a></dt><dd class="pointer" onclick="toGamePage(400546924,3);"><b>75</b><br/>35</dd></dl><dl id="match9" class="match round2 winnertop"><dt><b>1 <a href="http://espn.go.com/mens-college-basketball/team/_/id/12/arizona-wildcats" title="Arizona">Arizona</a></b><br/>8 <a href="http://espn.go.com/mens-college-basketball/team/_/id/2250/gonzaga-bulldogs" title="Gonzaga">Gonzaga</a></dt><dd class="pointer" onclick="toGamePage(400548688,3);"><b>84</b><br/>61</dd></dl><dl id="match10" class="match round2 winnerbot"><dt>12 <a href="http://espn.go.com/mens-college-basketball/team/_/id/2449/north-dakota-st-bison" title="North Dakota St">North Dakota St</a><br/><b>4 <a href="http://espn.go.com/mens-college-basketball/team/_/id/21/san-diego-st-aztecs" title="San Diego St">San Diego State</a></b></dt><dd class="pointer" onclick="toGamePage(400548509,3);">44<br/><b>63</b></dd></dl><dl id="match11" class="match round2 winnertop"><dt><b>6 <a href="http://espn.go.com/mens-college-basketball/team/_/id/239/baylor-bears" title="Baylor">Baylor</a></b><br/>3 <a href="http://espn.go.com/mens-college-basketball/team/_/id/156/creighton-bluejays" title="Creighton">Creighton</a></dt><dd class="pointer" onclick="toGamePage(400548679,3);"><b>85</b><br/>55</dd></dl><dl id="match12" class="match round2 winnerbot"><dt>7 <a href="http://espn.go.com/mens-college-basketball/team/_/id/2483/oregon-ducks" title="Oregon">Oregon</a><br/><b>2 <a href="http://espn.go.com/mens-college-basketball/team/_/id/275/wisconsin-badgers" title="Wisconsin">Wisconsin</a></b></dt><dd class="pointer" onclick="toGamePage(400548468,3);">77<br/><b>85</b></dd></dl><div id="match13" class="match round3 winnertop"><dl><dt><b>1 <a href="http://espn.go.com/mens-college-basketball/team/_/id/12/arizona-wildcats" title="Arizona">Arizona</a></b><br/>4 <a href="http://espn.go.com/mens-college-basketball/team/_/id/21/san-diego-st-aztecs" title="San Diego St">San Diego State</a></dt><dd class="pointer" onclick="toGamePage(400548900,3);"><b>70</b><br/>64</dd></dl></div><div id="match14" class="match round3 winnerbot"><dl><dt>6 <a href="http://espn.go.com/mens-college-basketball/team/_/id/239/baylor-bears" title="Baylor">Baylor</a><br/><b>2 <a href="http://espn.go.com/mens-college-basketball/team/_/id/275/wisconsin-badgers" title="Wisconsin">Wisconsin</a></b></dt><dd class="pointer" onclick="toGamePage(400548897,3);">52<br/><b>69</b></dd></dl></div><div class="regtitle">WEST</div><div class="venue v5">Anaheim, CA</div><div id="match15" class="match round4 winnerbot"><dl><dt>1 <a href="http://espn.go.com/mens-college-basketball/team/_/id/12/arizona-wildcats" title="Arizona">Arizona</a><br/><b>2 <a href="http://espn.go.com/mens-college-basketball/team/_/id/275/wisconsin-badgers" title="Wisconsin">Wisconsin</a></b></dt><dd class="pointer" onclick="toGamePage(400549675,3);">63<br/><b>64</b></dd></dl></div></div><div class="region"><div class="venue v1">St. Louis, MO</div><dl id="match16" class="match round1 winnertop"><dt><b>1 <a href="http://espn.go.com/mens-college-basketball/team/_/id/2724/wichita-st-shockers" title="Wichita St">Wichita State</a></b><br/>16 <a href="http://espn.go.com/mens-college-basketball/team/_/id/13/cal-poly-mustangs" title="Cal Poly">Cal Poly</a></dt><dd class="pointer" onclick="toGamePage(400546948,3);"><b>64</b><br/>37</dd></dl><dl id="match17" class="match round1 winnertop"><dt><b>8 <a href="http://espn.go.com/mens-college-basketball/team/_/id/96/kentucky-wildcats" title="Kentucky">Kentucky</a></b><br/>9 <a href="http://espn.go.com/mens-college-basketball/team/_/id/2306/kansas-st-wildcats" title="Kansas St">Kansas St</a></dt><dd class="pointer" onclick="toGamePage(400546928,3);"><b>56</b><br/>49</dd></dl><div class="venue v2">Orlando, FL</div><dl id="match18" class="match round1 winnertop"><dt><b>5 <a href="http://espn.go.com/mens-college-basketball/team/_/id/139/saint-louis-billikens" title="Saint Louis">Saint Louis</a></b><br/>12 <a href="http://espn.go.com/mens-college-basketball/team/_/id/152/nc-state-wolfpack" title="NC State">NC State</a></dt><dd class="pointer" onclick="toGamePage(400546949,3);"><b>83</b><br/>80</dd></dl><dl id="match19" class="match round1 winnertop"><dt><b>4 <a href="http://espn.go.com/mens-college-basketball/team/_/id/97/louisville-cardinals" title="Louisville">Louisville</a></b><br/>13 <a href="http://espn.go.com/mens-college-basketball/team/_/id/2363/manhattan-jaspers" title="Manhattan">Manhattan</a></dt><dd class="pointer" onclick="toGamePage(400546903,3);"><b>71</b><br/>64</dd></dl><div class="venue v3">Raleigh, NC</div><dl id="match20" class="match round1 winnerbot"><dt>6 <a href="http://espn.go.com/mens-college-basketball/team/_/id/113/massachusetts-minutemen" title="Massachusetts">Massachusetts</a><br/><b>11 <a href="http://espn.go.com/mens-college-basketball/team/_/id/2633/tennessee-volunteers" title="Tennessee">Tennessee</a></b></dt><dd class="pointer" onclick="toGamePage(400546950,3);">67<br/><b>86</b></dd></dl><dl id="match21" class="match round1 winnerbot"><dt>3 <a href="http://espn.go.com/mens-college-basketball/team/_/id/150/duke-blue-devils" title="Duke">Duke</a><br/><b>14 <a href="http://espn.go.com/mens-college-basketball/team/_/id/2382/mercer-bears" title="Mercer">Mercer</a></b></dt><dd class="pointer" onclick="toGamePage(400546931,3);">71<br/><b>78</b></dd></dl><div class="venue v4">Milwaukee, WI</div><dl id="match22" class="match round1 winnertop"><dt><b>7 <a href="http://espn.go.com/mens-college-basketball/team/_/id/251/texas-longhorns" title="Texas">Texas</a></b><br/>10 <a href="http://espn.go.com/mens-college-basketball/team/_/id/9/arizona-st-sun-devils" title="Arizona St">Arizona State</a></dt><dd class="pointer" onclick="toGamePage(400546930,3);"><b>87</b><br/>85</dd></dl><dl id="match23" class="match round1 winnertop"><dt><b>2 <a href="http://espn.go.com/mens-college-basketball/team/_/id/130/michigan-wolverines" title="Michigan">Michigan</a></b><br/>15 <a href="http://espn.go.com/mens-college-basketball/team/_/id/2747/wofford-terriers" title="Wofford">Wofford</a></dt><dd class="pointer" onclick="toGamePage(400546929,3);"><b>57</b><br/>40</dd></dl><dl id="match24" class="match round2 winnerbot"><dt>1 <a href="http://espn.go.com/mens-college-basketball/team/_/id/2724/wichita-st-shockers" title="Wichita St">Wichita State</a><br/><b>8 <a href="http://espn.go.com/mens-college-basketball/team/_/id/96/kentucky-wildcats" title="Kentucky">Kentucky</a></b></dt><dd class="pointer" onclick="toGamePage(400548706,3);">76<br/><b>78</b></dd></dl><dl id="match25" class="match round2 winnerbot"><dt>5 <a href="http://espn.go.com/mens-college-basketball/team/_/id/139/saint-louis-billikens" title="Saint Louis">Saint Louis</a><br/><b>4 <a href="http://espn.go.com/mens-college-basketball/team/_/id/97/louisville-cardinals" title="Louisville">Louisville</a></b></dt><dd class="pointer" onclick="toGamePage(400548508,3);">51<br/><b>66</b></dd></dl><dl id="match26" class="match round2 winnertop"><dt><b>11 <a href="http://espn.go.com/mens-college-basketball/team/_/id/2633/tennessee-volunteers" title="Tennessee">Tennessee</a></b><br/>14 <a href="http://espn.go.com/mens-college-basketball/team/_/id/2382/mercer-bears" title="Mercer">Mercer</a></dt><dd class="pointer" onclick="toGamePage(400548678,3);"><b>83</b><br/>63</dd></dl><dl id="match27" class="match round2 winnerbot"><dt>7 <a href="http://espn.go.com/mens-college-basketball/team/_/id/251/texas-longhorns" title="Texas">Texas</a><br/><b>2 <a href="http://espn.go.com/mens-college-basketball/team/_/id/130/michigan-wolverines" title="Michigan">Michigan</a></b></dt><dd class="pointer" onclick="toGamePage(400548473,3);">65<br/><b>79</b></dd></dl><div id="match28" class="match round3 winnertop"><dl><dt><b>8 <a href="http://espn.go.com/mens-college-basketball/team/_/id/96/kentucky-wildcats" title="Kentucky">Kentucky</a></b><br/>4 <a href="http://espn.go.com/mens-college-basketball/team/_/id/97/louisville-cardinals" title="Louisville">Louisville</a></dt><dd class="pointer" onclick="toGamePage(400548877,3);"><b>74</b><br/>69</dd></dl></div><div id="match29" class="match round3 winnerbot"><dl><dt>11 <a href="http://espn.go.com/mens-college-basketball/team/_/id/2633/tennessee-volunteers" title="Tennessee">Tennessee</a><br/><b>2 <a href="http://espn.go.com/mens-college-basketball/team/_/id/130/michigan-wolverines" title="Michigan">Michigan</a></b></dt><dd class="pointer" onclick="toGamePage(400548885,3);">71<br/><b>73</b></dd></dl></div><div class="regtitle">MIDWEST</div><div class="venue v5">Indianapolis, IN</div><div id="match30" class="match round4 winnertop"><dl><dt><b>8 <a href="http://espn.go.com/mens-college-basketball/team/_/id/96/kentucky-wildcats" title="Kentucky">Kentucky</a></b><br/>2 <a href="http://espn.go.com/mens-college-basketball/team/_/id/130/michigan-wolverines" title="Michigan">Michigan</a></dt><dd class="pointer" onclick="toGamePage(400549857,3);"><b>75</b><br/>72</dd></dl></div></div><div id="finalfour"><div class="venue final">Arlington, TX</div><div id="match61" class="match round5 winnerbot"><dl><dt>1 <a href="http://espn.go.com/mens-college-basketball/team/_/id/57/florida-gators" title="Florida">Florida</a><br/><b>7 <a href="http://espn.go.com/mens-college-basketball/team/_/id/41/connecticut-huskies" title="Connecticut">Connecticut</a></b></dt><dd class="pointer" onclick="toGamePage(400549976,3);">53<br/><b>63</b></dd></dl></div><div class="venue final">Arlington, TX</div><div id="match62" class="match round5 winnerbot"><dl><dt>2 <a href="http://espn.go.com/mens-college-basketball/team/_/id/275/wisconsin-badgers" title="Wisconsin">Wisconsin</a><br/><b>8 <a href="http://espn.go.com/mens-college-basketball/team/_/id/96/kentucky-wildcats" title="Kentucky">Kentucky</a></b></dt><dd class="pointer" onclick="toGamePage(400549978,3);">73<br/><b>74</b></dd></dl></div><div id="match63" class="match round6 winnertop"><dl><dt><b>7 <a href="http://espn.go.com/mens-college-basketball/team/_/id/41/connecticut-huskies" title="Connecticut">Connecticut</a></b><br/>8 <a href="http://espn.go.com/mens-college-basketball/team/_/id/96/kentucky-wildcats" title="Kentucky">Kentucky</a></dt><dd class="pointer" onclick="toGamePage(400551234,3);">60<br/>54</dd></dl></div></div></div></div></div><table cellspacing="1" cellpadding="3" class="tablehead" style="margin-bottom: 40px;"><tr class="oddrow"><td>Hover over team abbreviations to see the full team names. All game times are in ET.</td></tr></table></div></div></div></div><!-- begin sponsored links -->
+<div id="sponsored" class="mod-container mod-no-footer">
+<!-- begin sp links -->
+<div style="margin: 10px 0 0 0;">
+<!-- CONTENT: 09stats614, SPORT: ncb--><div style="margin:0px 0px 5px 0px; text-align: center; width: 614px;"><ins id="splinks-15012"></ins>
+        <script type="text/javascript">
+            (function($) {
+                // config params
+                var width = '614',
+                    height = '250',
+                    client = 'ca-espn-q',
+                    channel = 'ncb bottom',
+                    lang = 'null';
+
+                // builds iframe HTML
+                function buildIframe(width, height, client, channel) {
+                    var path = 'http://sports-ak.espn.go.com/espn/sponsoredlinks/adsense/iframeCached';
+                    // pass params as the hash as they are only needed on the client
+                    var hash = '15012|' + width + '|' + height + '|' + client + '|' + channel + '|' + lang;
+                    var iframe = '<iframe seamless scrolling="no" frameborder="0" height="' + height + '" width="' + width + '" src="' + path + '#' + hash + '"></iframe>';
+                    return iframe;
+                }
+
+                // handles messages from child iframe
+                function handleMessage(event) {
+                    if (event.origin === 'http://sports-ak.espn.go.com') {
+                        $('#splinks-' + event.data).html('<!-- no ads served -->');
+                    }
+                }
+
+                if (typeof window.addEventListener === 'function') {
+                    window.addEventListener('message', handleMessage, false);
+                } else {
+                    window.attachEvent('onmessage', handleMessage);
+                }
+
+                // insert the iframe
+                if (espn.geo) {
+                    espn.geo.getLocation().done(function(loc) {
+                        if (loc.country.isoCode !== 'usa' || espn.core.mobileApple || espn.core.android) {
+                            // outside US or not on desktop
+                            client = 'ca-espn-nq';
+                        }
+                        $('#splinks-15012').html(buildIframe(width, height, client, channel));
+                    }).fail(function() {
+                        $('#splinks-15012').html(buildIframe(width, height, 'ca-espn-nq', channel));
+                    });
+                } else {
+                    // can't locate them, assume they are outside US
+                    $('#splinks-15012').html(buildIframe(width, height, 'ca-espn-nq', channel));
+                }
+            })(jQuery);
+        </script>
+    </div></div>
+<!-- end sp links -->
+</div>
+<!-- end sponsored links -->
+</div><!-- begin bottom nav -->
+<!-- begin bottom nav/sitemap -->
+<div class="mod-container mod-jump-menu span-6">
+<div class="mod-content">
+<!-- NOVALIDATE -->
+<ul>
+<li>
+<ul>
+<li><h4><a href="http://espn.go.com/sports/" name="&amp;lpos=bottomnav2&amp;lid=bottomnav2_scores">SPORTS</a></h4></li>
+<li><a href="http://espn.go.com/nfl/" name="&amp;lpos=bottomnav2&amp;lid=bottomnav2_scores_nfl">NFL</a></li>
+<li><a href="http://espn.go.com/mlb/" name="&amp;lpos=bottomnav2&amp;lid=bottomnav2_scores_mlb">MLB</a></li>
+<li><a href="http://espn.go.com/nba/" name="&amp;lpos=bottomnav2&amp;lid=bottomnav2_scores_nba">NBA</a></li>
+<li><a href="http://espn.go.com/nhl/" name="&amp;lpos=bottomnav2&amp;lid=bottomnav2_scores_nhl">NHL</a></li>
+<li><a href="http://espn.go.com/college-football/" name="&amp;lpos=bottomnav2&amp;lid=bottomnav2_scores_ncf">College Football</a></li>
+<li><a href="http://espn.go.com/mens-college-basketball/" name="&amp;lpos=bottomnav2&amp;lid=bottomnav2_scores_ncb">College Basketball</a></li>
+<li><a href="http://soccernet.espn.go.com/index" name="&amp;lpos=bottomnav2&amp;lid=bottomnav2_scores_soccer">Soccer</a></li>
+<li><a href="http://espn.go.com/racing/nascar/" name="&amp;lpos=bottomnav2&amp;lid=bottomnav2_scores_nascar">NASCAR</a></li>
+</ul>
+</li>
+<li>
+<ul>
+<li><h4><a href="http://espn.go.com/sports/" name="&amp;lpos=bottomnav2&amp;lid=bottomnav2_sports">MORE</a></h4></li>
+<li><a href="http://espn.go.com/racing/" name="&amp;lpos=bottomnav2&amp;lid=bottomnav2_sports_racing">Racing</a></li>
+<li><a href="http://espn.go.com/golf/" name="&amp;lpos=bottomnav2&amp;lid=bottomnav2_sports_golf">Golf</a></li>
+<li><a href="http://espn.go.com/tennis/" name="&amp;lpos=bottomnav2&amp;lid=bottomnav2_sports_tennis">Tennis</a></li>
+<li><a href="http://espn.go.com/boxing/" name="&amp;lpos=bottomnav2&amp;lid=bottomnav2_sports_boxing">Boxing</a></li>
+<li><a href="http://espn.go.com/mma/" name="&amp;lpos=bottomnav2&amp;lid=bottomnav2_sports_mma">MMA</a></li>
+<li><a href="http://espn.go.com/college-football/recruiting/" name="&amp;lpos=bottomnav2&amp;lid=bottomnav2_sports_recruiting">Recruiting</a></li>
+<li><a href="http://espn.go.com/olympics/" name="&amp;lpos=bottomnav2&amp;lid=bottomnav2_sports_oly">Olympic Sports</a></li>
+<li><a href="http://espn.go.com/horse-racing/" name="&amp;lpos=bottomnav2&amp;lid=bottomnav2_sports_horse">Horse Racing</a></li>
+</ul>
+</li>
+<li>
+<ul>
+<li><h4><a href="http://games.espn.go.com/frontpage" name="&amp;lpos=bottomnav2&amp;lid=bottomnav2_fantasy">FANTASY</a></h4></li>
+<li><a href="http://games.espn.go.com/frontpage/football" name="&amp;lpos=bottomnav2&amp;lid=bottomnav2_fantasy_football">Football</a></li>
+<li><a href="http://games.espn.go.com/frontpage/baseball" name="&amp;lpos=bottomnav2&amp;lid=bottomnav2_fantasy_baseball">Baseball</a></li>
+<li><a href="http://streak.espn.go.com" name="&amp;lpos=bottomnav2&amp;lid=bottomnav2_fantasy_streak">Streak for the Cash</a></li>
+</ul>
+<ul>
+<li><h4><a href="http://espn.go.com/sportsnation/" name="&amp;lpos=bottomnav2&amp;lid=bottomnav2_sportsnation">SPORTSNATION</a></h4></li>
+<li><a href="http://espn.go.com/sportsnation/polls" name="&amp;lpos=bottomnav2&amp;lid=bottomnav2_sportsnation_polls">Polls</a></li>
+<li><a href="http://espn.go.com/sportsnation/chats" name="&amp;lpos=bottomnav2&amp;lid=bottomnav2_sportsnation_chats">Chats</a></li>
+</ul>
+</li>
+<li>
+<ul>
+<li><h4><a href="http://espn.go.com/video/">VIDEO</a></h4></li>
+<li><a href="http://espn.go.com/video/category?id=2378529" name="&amp;lpos=bottomnav2&amp;lid=bottomnav2_video_mostrecent">Most Recent</a></li>
+<li><a href="http://search.espn.go.com/highlights/video/6" name="&amp;lpos=bottomnav2&amp;lid=bottomnav2_video_highlights">Highlights</a></li>
+</ul>
+<ul>
+<li><h4>MORE</h4></li>
+<li><a href="http://espn.go.com/blog/playbook/sounds/" name="&amp;lpos=bottomnav2&amp;lid=bottomnav2_music">Music</a></li>
+<li><a href="http://travel.espn.go.com/travel/passport/index" name="&amp;lpos=bottomnav2&amp;lid=bottomnav2_thelife_passport">Sports Passport</a></li>
+<li><a href="http://espn.go.com/travel/sports/calendar/" name="&amp;lpos=bottomnav2&amp;lid=bottomnav2_thelife_calendar">Sports Calendar</a></li>
+<li><a href="http://espn.go.com/free-online-games/" name="&amp;lpos=bottomnav2&amp;lid=bottomnav2_thelife_arcade">Arcade</a></li>
+<li><a href="http://sports.espn.go.com/espn/contests/index" name="&amp;lpos=bottomnav2&amp;lid=bottomnav2_thelife_contests">Contests</a></li>
+</ul>
+</li>
+<li>
+<ul>
+<li><h4>TOOLS</h4></li>
+<li><a href="http://sports.espn.go.com/espn/news/story?page=contact/index"  name="&amp;lpos=bottomnav2&amp;lid=bottomnav2_tools_contactus">Contact Us</a></li>
+<li><a tref="/members/v3_1/index" href="" class="cbOverlay" data-options='{"language":"en","width":"825","height":"425"}'>Member Services</a></li>
+<li><a href="http://espn.go.com/personalization/"  name="&amp;lpos=bottomnav2&amp;lid=bottomnav2_tools_myespn">myESPN</a></li>
+<li><a href="http://proxy.espn.go.com/mobile/alerts/alertmanager"  name="&amp;lpos=bottomnav2&amp;lid=bottomnav2_tools_myespn">ESPN Alerts</a></li>
+<li><a href="http://espn.go.com/espn/corrections" name="&amp;lpos=bottomnav2&amp;lid=bottomnav2_tools_corrections">Corrections</a></li>
+<li><a href="http://sports.espn.go.com/nfl/lines" name="&amp;lpos=bottomnav2&amp;lid=bottomnav2_tools_dailyline">Daily Line</a></li>
+<li><a href="http://sports.espn.go.com/espn/news/story?page=rssinfo" name="&amp;lpos=bottomnav2&amp;lid=bottomnav2_tools_rss">RSS</a></li>
+</ul>
+</li>
+<li class="last">
+<ul>
+<li><h4><a href="http://sports.espn.go.com/espntv/espnGuide" name="&amp;lpos=bottomnav2&amp;lid=bottomnav2_tv">TV LISTINGS</a></h4></li>
+<li><h4><a href="http://www.espn3.com" name="&amp;lpos=bottomnav2&amp;lid=bottomnav2_3">WatchESPN</a></h4></li>
+<li><h4><a href="http://espnradio.espn.go.com/espnradio/index" name="&amp;lpos=bottomnav2&amp;lid=bottomnav2_radio">RADIO</a></h4></li>
+<!--<li><h4><a href="http://espnradio.espn.go.com/espnradio/podcast/index" name="&amp;lpos=bottomnav2&amp;lid=podcenter">PODCENTER</a></h4></li>-->
+
+<li><h4><a href="http://insider.espn.go.com/insider/espn-the-magazine/" name="&amp;lpos=bottomnav2&amp;lid=bottomnav2_mag">ESPN THE MAGAZINE</a></h4></li>
+<li><h4><a href="http://log.go.com/log?srvc=sz&amp;guid=20547CF2-0B36-404D-81D3-E5339A6CEFBE&amp;drop=0&amp;addata=3374:65:478847:65&amp;a=1&amp;goto=http://espn.teamfanshop.com" name="&amp;lpos=bottomnav2&amp;lid=bottomnav2_shop">SHOP</a></h4></li>
+<li><h4><a href="http://www.sportscenter.com" name="&amp;lpos=bottomnav2&amp;lid=bottomnav2_sportscenter">SPORTSCENTER</a></h4></li>
+<li><h4><a href="http://www.teamespn.com" name="&amp;lpos=bottomnav2&amp;lid=bottomnav2_teamespn">TEAM ESPN</a></h4></li>
+<li><h4><a href="http://www.espnfrontrow.com" name="&amp;lpos=bottomnav2&amp;lid=bottomnav2_espnfrontrow">ESPN FRONT ROW</a></h4></li>
+</ul>
+</li>
+</ul>
+</div>
+</div>
+<!-- end bottom nav/sitemap -->
+<!-- end bottom nav -->
+</div>
+<div id="nav-wrapper" class="container">
+<div id="nav-wrapper-container">
+<div id="nav-main">
+<!-- begin site nav -->
+<ul class="top">
+<!-- begin site nav -->
+<p><!-- begin site nav --></p>
+<ul class="top" id="nav-main-list"><!-- start: Menuitem :: MyTAB -->
+<li class="last myespn" id="menu-myespn"><a class="myespn" ref="#">MyESPN</a></li>
+<!-- start: Menuitem :: NFL -->
+<li class="sport-menu default t-nfl" data-sportid="28" id="menu-nfl"><a href="http://espn.go.com/nfl/" name="&amp;lpos=sitenavdefault&amp;lid=sitenav_nfl">NFL</a></li>
+<!-- start: Menuitem :: MLB -->
+<li class="sport-menu default t-mlb" data-sportid="10" id="menu-mlb"><a href="http://espn.go.com/mlb/" name="&amp;lpos=sitenavdefault&amp;lid=sitenav_mlb">MLB</a></li>
+<!-- start: Menuitem :: NBA -->
+<li class="sport-menu default t-nba" data-sportid="46" id="menu-nba"><a href="http://espn.go.com/nba/" name="&amp;lpos=sitenavdefault&amp;lid=sitenav_nba">NBA</a></li>
+<!-- start: Menuitem :: NHL -->
+<li class="sport-menu default t-nhl" data-sportid="90" id="menu-nhl"><a href="http://espn.go.com/nhl/" name="&amp;lpos=sitenavdefault&amp;lid=sitenav_nhl">NHL</a></li>
+<!-- start: Menuitem :: NCAA FB -->
+<li class="sport-menu default t-ncf" data-sportid="23" id="menu-ncf"><a href="http://espn.go.com/college-football/" name="&amp;lpos=sitenavdefault&amp;lid=sitenav_ncf">NCAAF</a></li>
+<!-- start: Menuitem :: NCAA BB -->
+<li class="sport-menu default t-ncb selected" data-sportid="41" id="menu-ncb"><a href="http://espn.go.com/mens-college-basketball/" name="&amp;lpos=sitenavdefault&amp;lid=sitenav_ncb">NCAAM</a></li>
+<!-- start: Menuitem :: NASCAR -->
+<li class="sport-menu default t-nascar" data-sportid="2020" id="menu-nascar"><a href="http://espn.go.com/racing/nascar/" name="&amp;lpos=sitenavdefault&amp;lid=sitenav_nascar">NASCAR</a></li>
+<!-- start: Menuitem :: SOCCER -->
+<li class="sport-menu default t-soccer" data-sportid="600" id="menu-soccer"><a href="http://espnfc.us/" name="&amp;lpos=sitenavdefault&amp;lid=sitenav_soccer">SOCCER</a></li>
+<!-- start: Menuitem :: GOLF -->
+<li class="sport-menu t-golf" data-sportid="1106" id="menu-golf" style="display: none;"><a href="http://espn.go.com/golf/" name="&amp;lpos=sitenavdefault&amp;lid=sitenav_golfl">GOLF</a></li>
+<!-- start: Menuitem :: TENNIS -->
+<li class="sport-menu t-tennis" data-sportid="850" id="menu-tennis" style="display: none;"><a href="http://espn.go.com/tennis/" name="&amp;lpos=sitenavdefault&amp;lid=sitenav_tennis">TENNIS</a></li>
+<!-- start: Menuitem :: BOXING-->
+<li class="sport-menu t-boxing" data-sportid="1000" id="menu-boxing" style="display: none;"><a href="http://espn.go.com/boxing/" name="&amp;lpos=sitenavdefault&amp;lid=sitenav_boxing">BOXING</a></li>
+<!-- start: Menuitem :: MMA -->
+<li class="sport-menu t-mma" data-sportid="3301" id="menu-mma" style="display: none;"><a href="http://espn.go.com/mma/" name="&amp;lpos=sitenavdefault&amp;lid=sitenav_mma">MMA</a></li>
+<!-- start: Menuitem :: ALL SPORTS -->
+<li class="nav-allsports t-allsports" id="menu-allsports"><a href="http://espn.go.com/sports/" name="&amp;lpos=sitenavdefault&amp;lid=sitenav_allsports">MORE SPORTS</a></li>
+<!-- start: Menuitem :: INSIDER -->
+<li class="sport-menu t-insider" id="menu-insider" style="display: none;"><a href="http://insider.espn.go.com/insider/index" name="&amp;lpos=sitenavdefault&amp;lid=sitenav_insider">INSIDER</a></li>
+<!-- start: Menuitem :: SPORTSNATION -->
+<li class="sport-menu t-sportsnation" id="menu-sportsnation" style="display: none;"><a href="http://espn.go.com/sportsnation/" name="&amp;lpos=sitenavdefault&amp;lid=sitenav_sportsnation">SN</a></li>
+<!-- start: Menuitem :: RADIO & MORE -->
+<li class="right-menu two-line last t-radio" id="menu-radio"><a href="http://espn.go.com/espnradio/" name="&amp;lpos=sitenavdefault&amp;lid=sitenav_radioandmore">RADIO<span>&amp; MORE</span></a></li>
+<!-- start: Menuitem :: espnW & PLAYBOOK -->
+<li class="right-menu two-line t-page2" id="menu-page2"><a href="http://espn.go.com/espnw/" name="&amp;lpos=sitenavdefault&amp;lid=sitenav_espnwandxgames" target="_blank">espnW<span>&amp; X GAMES</span></a></li>
+<!-- start: Menuitem :: FANTASY & GAMES -->
+<li class="right-menu two-line t-fantasy" id="menu-fantasy"><a href="http://games.espn.go.com/frontpage" name="&amp;lpos=sitenavdefault&amp;lid=sitenav_fantasy">FANTASY<span>&amp; GAMES</span></a></li>
+<!-- start: Menuitem :: WATCH -->
+<li class="right-menu t-watch" id="menu-watch"><a href="http://espn.go.com/video/" name="&amp;lpos=sitenavdefault&amp;lid=sitenav_watch">WATCH</a></li>
+</ul>
+<!-- end site nav -->
+<!-- end site nav -->
+</ul>
+<!-- end site nav -->
+</div>
+<div class="nav-main-secondary">
+<!--/ncb/tournament/bracket--><ul>
+<!--/mens-college-basketball/tournament/bracket--><li><a href="http://espn.go.com/mens-college-basketball/" name="&lpos=subnav&lid=subnav_NCBTourney13_NCB+Home">Men's Home</a></li>
+<!--<li><a href="http://espn.go.com/mens-college-basketball/tournament" name="&lpos=subnav&lid=subnav_NCBTourney13_NCB+Tourney+Home">Tourney Home</a></li>
+--><li class="active"><a href="http://espn.go.com/mens-college-basketball/tournament/bracket" name="&lpos=subnav&lid=subnav_NCBTourney13_NCB+Tourney+Bracket">Bracket</a></li>
+<li><a href="http://scores.espn.go.com/ncb/scoreboard" name="&lpos=subnav&lid=subnav_NCBTourney13_NCB+Scoreboard">Scoreboard</a></li>
+<li><a href="http://espn.go.com/ncb/notebook/_/page/dailyword140408/daily-word" name="&lpos=subnav&lid=subnav_NCBTourney13_NCB+Daily+Word">Daily Word</a></li>
+<li><a href="http://espn.go.com/ncb/notebook/_/page/homecourt140308/home-court" name="&lpos=subnav&lid=subnav_NCBTourney13_NCB+Home+Court">Home Court</a></li>
+<li><a href="http://espn.go.com/blog/collegebasketballnation" name="&lpos=subnav&lid=subnav_NCBTourney13_NCB+Nation+Blog">Nation Blog</a></li>
+<li><a href="http://insider.espn.go.com/insider/tournament/tools" name="&lpos=subnav&lid=subnav_NCBTourney13_NCB+Insider+Tournament+Tools">Insider Tourney Tools</a></li>
+<li><a href="http://espn.go.com/mens-college-basketball/tournament/2014/story/_/id/10590236/2014-ncaa-tournament-bracket-projections-joe-lunardi-guide-all-68-teams" name="&lpos=subnav&lid=subnav_NCBTourney13_NCB+Insider+Tournament+Tips">Insider Tips</a></li>
+<li><a href="http://games.espn.go.com/tournament-challenge-bracket/" name="&lpos=subnav&lid=subnav_NCBTourney13_TC+Men">Tournament Challenge</a></li>
+<!--<li><a href="http://espn.go.com/womens-college-basketball/tournament" name="&lpos=subnav&lid=subnav_Women_Tournament">Women's Tournament</a></li>
+-->
+</ul>
+</div>
+</div>
+</div>
+</div>
+<!-- end content -->
+</div>
+<!-- end subheader -->
+
+<script>
+espn.core.init.nav();
+espn.insider.checkUserForPromo();
+</script>
+<!-- begin footer -->
+<div id="footer" class="container">
+<script type="text/javascript">
+//<![CDATA[
+var link = window.location;
+var bugText = '<a href="#" onclick="window.open(\'http://dynamic.espn.go.com/espn/bugs?url=' + escape(link) + '\', \'Bugs\',\'noresizable,noscrollbars,height=400,width=400\');">Report a Bug</a> | ';
+//]]>
+</script>
+<span style="font-weight:bold;">ESPN.com:</span> <a href="http://sports.espn.go.com/espn/news/story?page=help/index">Help</a> | <a href="http://espnmediazone.com/us/" rel="nofollow">Press</a> | <a href="http://www.espncms.com/Advertise-on-ESPN.aspx" rel="nofollow">Advertise on ESPN.com</a> | <a href="http://www.espncms.com" rel="nofollow">Sales Media Kit</a> | <a href="http://preferences.truste.com/2.0/?type=espn&affiliateId=148" onclick="window.open('http://preferences.truste.com/2.0/?type=espn&affiliateId=148','popup','width=986,height=878,scrollbars=yes,resizable=no,toolbar=no,directories=no,location=no,menubar=no,status=no,left=0,top=0'); return false">Interest-Based Ads</a> | <script type="text/javascript">document.write(bugText);</script><a href="http://espn.go.com/espn/corrections">Corrections</a> | <a href="http://sports.espn.go.com/espn/news/story?page=contact/index">Contact Us</a> | <a href="http://espn.go.com/espn/sitemap">Site Map</a> | <a href="http://espncareers.com">Jobs at ESPN</a> | <!--a href="http://corporate.disney.go.com/corporate/sourcing.html" rel="nofollow"><span style="font-weight:bold;">Supplier Information</span></a--><a href="http://go.com">Go.com</a><br/>&copy;  ESPN Internet Ventures. <a href="http://disneytermsofuse.com/" rel="nofollow">Terms of Use</a>, <a href="http://disneyprivacycenter.com/" rel="nofollow">Privacy Policy</a>, <a href="https://disneyprivacycenter.com/notice-to-california-residents/" rel="nofollow">Your California Privacy Rights</a>,  <a href="https://disneyprivacycenter.com/kids-privacy-policy/english/">Children's Online Privacy Policy</a> and <a href="http://preferences-mgr.truste.com/?type=espn&affiliateId=148">Interest-Based Ads</a> are applicable to you.  All rights reserved.
+
+<!--
+<a href="http://www.espnshop.com/" onClick="location.href('http://log.go.com/log?srvc=sz&guid=73B641A0-6660-4EFC-B8FF-9DE23E8CD9BD&drop=0&addata=3374:65:478847:65&a=1&goto=http://www.espnshop.com/');return false">Shop</a>
+--></div>
+<!-- end footer -->
+<!--[if lte IE 9]></div><![endif]-->
+</div>
+<!-- end bg-elements -->
+
+
+<!-- SiteCatalyst code version: H.21.3 Copyright 1997-2010 Omniture, Inc. http://www.omniture.com -->
+<script type="text/javascript">
+	var undef = 'undefined'
+	,s_account="wdgespcom"
+	,omniPageName = "espn:ncb:ncaatourney14:bracket22"
+	
+	,insiderStatus = ""
+	,anGen = ""
+	,anYear = ""
+	,anDateString = ""
+	,anLoginStatus = ""
+	,callOmniture = function(){
+		/*-- core story s_omni properties --*/
+		if (typeof anCV != "undefined"){anParseLoginBarInfo(anCV);}
+		s_omni.pageName="ncb:ncaatourney14:bracket22";
+		s_omni.server = window.location.host; // Server from the Host
+		s_omni.channel = "ncb";
+		s_omni.prop1 = "espn";
+		s_omni.prop4 = "bracket";
+		s_omni.prop5 = "ncb:ncaatourney14";
+		s_omni.prop11 = (insiderStatus !== null) ? insiderStatus + ":premium-no" : "premium-no";
+		s_omni.prop13 = "automated-general";
+		s_omni.prop17 = "en";
+		s_omni.prop21 = anDateString;
+		s_omni.prop22 = anGen;
+		s_omni.prop25 = "basketball";
+		s_omni.prop26 = "ncb";
+		s_omni.prop29 = anLoginStatus;
+		s_omni.prop30 = "n";
+		s_omni.hier1 = "ncb:ncaatourney14:bracket22";
+		s_omni.eVar7 = anYear + ":" + anGen + ":" + anLoginStatus + ":" + s_omni.prop11 + ":";
+		s_omni.eVar9 = "en";
+		s_omni.eVar13 = "ncb:ncaatourney14:bracket22";
+		s_omni.eVar19 = "basketball";
+		s_omni.eVar21 = "ncb";
+		
+		if (s_omni.prop11=="anonymous:premium-yes" || s_omni.prop11=="insider-no:premium-yes" && typeof s_omni.prop4!="undefined" &&
+			(s_omni.prop4=="story" || s_omni.prop4=="blog")) {
+			if (typeof s_omni.events != "undefined" && s_omni.events!="") {
+				s_omni.events = s_omni.events+",event8";
+			} else { 
+				s_omni.events="event8";
+			}
+		}
+		
+		s_omni.prop38 = "Desktop";
+		s_omni.eVar38 = "D=c38";
+		
+		
+		anVersion = "_11apr14_v2_0_r5_";
+		
+		/************* DO NOT ALTER ANYTHING BELOW THIS LINE ! **************/
+		
+		var s_code = s_omni.t();
+		if(s_code) {
+			var sci = new Image(1,1);
+			sci.onload = function() {console.log("loaded no append")};
+			sci.src = s_code;
+		}
+		
+	};	
+</script>
+
+
+
+<script type="text/javascript">
+	if (typeof(s_omni) === 'undefined') {
+		jQuery(function($) {
+			// we want to load the analytics files from the cache if possible - so, let's use full $.ajax() calls
+			$.ajax({
+				type:'GET',
+				url: 'http://a.espncdn.com/combiner/c?js=analytics/sOmni.js,analytics/analytics.js,analytics/externalnielsen.js&v=15',
+				dataType: 'script',
+				cache: true,
+				success: function() {
+					var lgSrc;
+					if(typeof anCV !== undef && anCV === '' && document.getElementById('form-memberarea') != null) {
+						lgSrc = 'https://r.espn.go.com/members/util/getUserInfo?cb=runOmnitureIndependently&regType=true';
+						$.getScript(lgSrc); // we don't want this to be cached - so we'll use the $.getScript() method
+					} else {
+						callOmniture();
+					}
+				}
+			});
+		});
+	}
+</script>
+
+<!-- End SiteCatalyst code version: H.21. -->
+
+
+<!-- Begin comScore Tag -->
+<script type="text/javascript">
+	if (typeof(jQuery) !== 'undefined') {
+		jQuery(function($) {
+			if(typeof window._comscore === 'undefined') {
+				window._comscore = window._comscore || [];
+				window._comscore.push({ c1: "2", c2: "3000005" });
+				jQuery.getScript((document.location.protocol == "https:" ? "https://sb" : "http://b") + ".scorecardresearch.com/beacon.js");
+			}
+		});
+	}
+</script>
+<!-- End comScore Tag -->
+		<script>
+		var _sf_async_config={
+			"uid":22222,
+			"domain":"espn.go.com",
+			"pingServer":"pespn.chartbeat.net",
+			"useCanonical":true,
+			"useSubDomains":false,
+			"sections":"ncb,ncb:ncaatourney14",
+			"authors":"bracket"
+		};
+		if (typeof(ad_site) !== 'undefined') { _sf_async_config.zone = ad_site; }
+
+		// load both chartbeat_pub and chartbeat_video
+		(function () {
+			function a() {
+				window._sf_endpt = (new Date()).getTime();
+
+				var cbDomain = (("https:"==document.location.protocol)?"https://a248.e.akamai.net/chartbeat.download.akamai.com/102508/":"http://static.chartbeat.com/");
+
+				var c = document.createElement("script");
+				c.setAttribute("language","javascript");
+				c.setAttribute("type","text/javascript");
+				c.setAttribute("src", cbDomain+"js/chartbeat_pub.js");
+				document.body.appendChild(c);
+
+				if(typeof StrategyInterface !== 'undefined' && (typeof espn !== 'undefined' && typeof espn.video !== 'undefined')){
+					var e = document.createElement("script");
+					e.setAttribute("language",	"javascript");
+					e.setAttribute("type", "text/javascript");
+					e.setAttribute("src", cbDomain+"js/chartbeat_video.js");
+					document.body.appendChild(e);
+				}
+			}
+			var b = window.onload;
+			window.onload = (typeof window.onload != "function") ? a : function () { b(); a() }
+		})();
+		//(function(){function a(){window._sf_endpt=(new Date()).getTime();var c=document.createElement("script");c.setAttribute("language","javascript");c.setAttribute("type","text/javascript");c.setAttribute("src",(("https:"==document.location.protocol)?"https://a248.e.akamai.net/chartbeat.download.akamai.com/102508/":"http://static.chartbeat.com/")+"js/chartbeat_pub.js");document.body.appendChild(c)}var b=window.onload;window.onload=(typeof window.onload!="function")?a:function(){b();a()}})();
+		</script>
+	
+<!-- dynamic logic: safecount -->
+<script src="http://content.dl-rms.com/rms/mother/508/nodetag.js"></script>
+
+<!-- start cnt_code -->
+<!-- end cnt_code -->
+<script type="text/javascript" charset="utf-8">buildOutHeadlinesForPinnedSite();</script>
+<script type="text/javascript">
+   var isInIFrame = (window.location != window.parent.location) ? true : false;
+   if(isInIFrame){ if(document.referrer){ if(document.referrer.indexOf(".go.com")==-1){ top.location.href=self.location.href; } } }
+</script>
+
+<script type='text/javascript'>
+  //<![CDATA[
+    (function(){
+    window.gravityInsightsParams = {
+      'type': 'content',
+      'action': '',
+      'site_guid': '9a41401e9b7c945344e001ee7f23031e'
+    };
+    var b,c;b="https:"===document.location.protocol?"https://b-ssl.grvcdn.com/moth-min.js":"http://b.grvcdn.com/moth-min.js";window.grvMakeScript=function(d){var a;a=document.createElement("script");a.type="text/javascript";a.async=!0;a.src=d;return a};c=document.getElementsByTagName("script")[0];b&&c.parentNode.insertBefore(window.grvMakeScript(b),c);})();
+  //]]>
+</script></body>
+</html>

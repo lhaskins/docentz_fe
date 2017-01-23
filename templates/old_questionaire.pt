@@ -1,0 +1,295 @@
+<html>
+<title>Confessions of a Student Athlete - Questionaire</title>
+
+<head>
+
+<meta name='description' content='sports and academic management speaker' />
+<meta name='keywords' content='sports, speaker, academics, professional, business, management' />
+<meta property='og:site_name' content='Confessions of a Student Athlete' />
+<meta property='og:title' content='Confessions of a Student Athlete' />
+<meta property='og:description' content='sports and academic management speaker' />
+<!--meta property='og:image' content='http://www.studentathleteconfessions.com/uploads/1/0/6/3/10630334/5849223.jpeg?1348451250' /-->
+<meta property='og:url' content='http://www.studentathleteconfessions.com/' />
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+<link rel="shortcut icon" href="${request.static_url('cosa:static/cosa.jpeg')}">
+
+  <style type='text/css'>
+  .wsite-header {
+	background-image: url(/static/cosa.jpeg) !important;
+	background-position: 0 0 !important;
+  }
+  </style>
+
+  <!--STYLE TYPE="text/css">
+    a:link {color:black; text-decoration:none}
+    a:hover {color:blue; text-decoration:underline}
+  </STYLE-->
+</head>
+
+<body BGCOLOR="FFFFFF">
+
+<center>
+  <a>
+    <img class="logo img-responsive" src="${request.static_url('cosa:static/cosa.jpeg')}" alt="pyramid web framework">
+  </a>
+</center>
+
+<form method="POST">
+<table BORDER="0" ALIGN="left">
+
+<tr>
+<td VALIGN="top" WIDTH="200">
+    1. Student Name:<br/>
+    <input type="text" name="studentname">
+    <br/>
+</td>
+</tr>
+
+<tr> <td VALIGN="top" WIDTH="200"> <br/> </td> </tr>
+
+<tr>
+<td VALIGN="top" WIDTH="200">
+    2. Gender:<br/>
+    <input type="radio" name="sex" value="male" checked>Male
+    <br/>
+    <input type="radio" name="sex" value="female">Female
+</td>
+</tr>
+
+<tr> <td VALIGN="top" WIDTH="200"> <br/> </td> </tr>
+
+<tr>
+<td VALIGN="top" WIDTH="200">
+    3. Email Address:<br/>
+    <input type="text" name="email">
+    <br/>
+</td>
+</tr>
+
+<tr> <td VALIGN="top" WIDTH="200"> <br/> </td> </tr>
+
+<tr>
+<td VALIGN="top" WIDTH="200">
+    4. Phone Number(s):<br/>
+    <input type="text" name="phone">
+    <br/>
+</td>
+</tr>
+
+<tr> <td VALIGN="top" WIDTH="200"> <br/> </td> </tr>
+
+<tr>
+<td VALIGN="top" WIDTH="200">
+  5. Current Grade/Year:<br/>
+  <select name="year">
+    <option value="other">Other</option>
+    <option value="seventh">7th</option>
+    <option value="eighth">8th</option>
+    <option value="freshman">Freshman</option>
+    <option value="sophmore">Sophmore</option>
+    <option value="junior">Junior</option>
+    <option value="senior">Senior</option>
+  </select>
+</td>
+</tr>
+
+<tr> <td VALIGN="top" WIDTH="200"> <br/> </td> </tr>
+
+<tr>
+<td VALIGN="top" WIDTH="200">
+  6. Enter your resident state:<br/>
+  <select name="resident">
+    <option value="international">International</option>
+    <option value="al">Alabama (AL)</option>
+    <option value="ak">Alaska (AK)</option>
+    <option value="az">Arizona (AZ)</option>
+    <option value="ar">Arkansas (AR)</option>
+    <option value="ca">California (CA)</option>
+    <option value="co">Colorado (CO)</option>
+    <option value="ct">Conneticutt (CT)</option>
+    <option value="ga">Georgia (GA)</option>
+    <option value="md">Maryland (MD)</option>
+    <option value="nc">North Carolina (NC)</option>
+    <option value="sc">South Carolina (SC)</option>
+    <option value="tn">Tennessee (TN)</option>
+    <option value="va">Virginia (VA)</option>
+  </select>
+</td>
+</tr>
+
+<tr> <td VALIGN="top" WIDTH="200"> <br/> </td> </tr>
+
+<tr>
+<td VALIGN="top" WIDTH="500">
+    7. Enter any other preferred states (No more than 3 states):<br/>
+    <input type="text" name="states">
+    <br/>
+</td>
+</tr>
+
+<tr> <td VALIGN="top" WIDTH="200"> <br/> </td> </tr>
+
+<tr>
+<td VALIGN="top" WIDTH="500">
+  8. What sport do you play? 
+  <br/>
+  <select name="sport">
+    <option value="baseball">Baseball</option>
+    <option value="basketball">Basketball</option>
+    <option value="soccer">Soccer</option>
+    <option value="football">Football</option>
+    <option value="track">Track</option>
+    <option value="volleyball">Volleyball</option>
+  </select>
+</td>
+</tr>
+
+<tr> <td VALIGN="top" WIDTH="500"> <br/> </td> </tr>
+
+<tr>
+<td VALIGN="top" WIDTH="200">
+    9. What position do you play? 
+    <br/>
+    <input type="text" name="position">
+    <br/>
+</td>
+</tr>
+
+<tr> <td VALIGN="top" WIDTH="200"> <br/> </td> </tr>
+
+<tr>
+<td VALIGN="top" WIDTH="500">
+    10. Are you looking only for a full athletic scholarship?
+    <br/>
+    <input type="radio" name="full_scholarship" value="yes" checked>Yes
+    <br/>
+    <input type="radio" name="full_scholarship" value="no">No
+</td>
+</tr>
+
+<tr> <td VALIGN="top" WIDTH="200"> <br/> </td> </tr>
+
+<tr>
+<td VALIGN="top" WIDTH="500">
+  11. How would you describe your academic achievement to date?
+  <br/>
+  <select name="academics">
+    <option value="very_good">Very Good</option>
+    <option value="ok">OK/Average</option>
+    <option value="not_good">Not as Good, but willing to work</option>
+    <option value="other">Other</option>
+  </select>
+</td>
+</tr>
+
+<tr> <td VALIGN="top" WIDTH="200"> <br/> </td> </tr>
+
+<tr>
+<td VALIGN="top" WIDTH="200">
+    12. Un-weighted GPA 
+    <br/>
+    <input type="text" name="gpa">
+    <br/>
+</td>
+</tr>
+
+<tr> <td VALIGN="top" WIDTH="200"> <br/> </td> </tr>
+
+<tr>
+<td VALIGN="top" WIDTH="500">
+    13. SAT score (Can put N/A if you don't have a score) 
+    <br/>
+    <input type="text" name="sat">
+    <br/>
+</td>
+</tr>
+
+<tr> <td VALIGN="top" WIDTH="200"> <br/> </td> </tr>
+
+<tr>
+<td VALIGN="top" WIDTH="500">
+    14. ACT score (Can put N/A if you don't have a score) 
+    <br/>
+    <input type="text" name="act">
+    <br/>
+</td>
+</tr>
+
+<tr> <td VALIGN="top" WIDTH="200"> <br/> </td> </tr>
+
+<tr>
+<td VALIGN="top" WIDTH="500">
+    15. Potential Major (or scholastic interests, list as many as you like) 
+    <br/>
+    <input type="text" name="major">
+    <br/>
+</td>
+</tr>
+
+<tr> <td VALIGN="top" WIDTH="200"> <br/> </td> </tr>
+
+<tr>
+<td VALIGN="top" WIDTH="700">
+     16. What college/university did anyone in your family attend?  (Family alma mater) 
+    <br/>
+    <input type="text" name="alma_mater">
+    <br/>
+</td>
+</tr>
+
+<tr> <td VALIGN="top" WIDTH="200"> <br/> </td> </tr>
+
+<tr>
+<td VALIGN="top" WIDTH="700">
+    17. Which interested colleges/universities have you had contact with?  (School interest) 
+    <br/>
+    <input type="text" name="interested_colleges">
+    <br/>
+</td>
+</tr>
+
+<tr> <td VALIGN="top" WIDTH="200"> <br/> </td> </tr>
+
+<tr>
+<td VALIGN="top" WIDTH="500">
+    18. Would you like to attend a college/university close to home?
+    <br/>
+    <input type="radio" name="close_home" value="yes" checked>Yes
+    <br/>
+    <input type="radio" name="close_home" value="no">No
+</td>
+</tr>
+
+<tr> <td VALIGN="top" WIDTH="500"> <br/> </td> </tr>
+
+<tr>
+<td VALIGN="top" WIDTH="200">
+  19. What college division would you like to play in?
+    <br/>
+  <select name="division">
+    <option value="all">All</option>
+    <option value="ncaa_d1">NCAA - Division 1</option>
+    <option value="ncaa_d2">NCAA - Division 2</option>
+    <option value="ncaa_d3">NCAA - Division 3</option>
+    <option value="naia">NAIA</option>
+    <option value="juco">JUCO</option>
+  </select>
+</td>
+</tr>
+
+<tr> <td VALIGN="top" WIDTH="200"> <br/> </td> </tr>
+
+<tr>
+<td VALIGN="top" WIDTH="200">
+  <input type="submit" value="Submit">
+</td>
+</tr>
+
+<tr> <td VALIGN="top" WIDTH="200"> <br/> </td> </tr>
+
+</table>
+</form>
+
+</body>
+</html>
+

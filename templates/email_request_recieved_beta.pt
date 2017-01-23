@@ -1,0 +1,73 @@
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:tal="http://xml.zope.org/namespaces/tal"
+      xmlns:metal="http://xml.zope.org/namespaces/metal">
+  <head>
+    <style>body { width:100%; background:#dedee0; }
+           .outer-table { width: 600px;
+                          position: relative; 
+                          border: none; }
+           .outer-table .banner td { height: 60px;
+                          background: #3d3e40;
+                          color:#dedee0;
+                          padding-top:10px;
+                          padding-left:10px;
+                          border:none;
+                          border-bottom:1px solid #228b22;
+                          font-family:Georgia,sans-serif; }
+           .outer-table .email-body td {
+                          background: #ffffff;
+                          color:#21211f;
+                          padding-top:10px;
+                          padding-left:10px;
+                          padding-bottom:30px;
+                          border:none;
+                          font-family:Georgia,sans-serif; }
+           .inner-table { width: 100%;
+                          background: #dedee0; }
+    </style>
+  </head>
+  <body>
+
+<div style="width: 600px; margin: 0 auto;">
+  <center>
+
+    <table class="outer-table">
+        <tr>
+          <td style="height:60px; background:#3d3e40;color:#dedee0;padding-top:10px; padding-left:10px;border:none;border-bottom:1px solid #228b22; font-family:Georgia,sans-serif;">
+            <img alt="Docentz" style="position: relative;right: 5px;" src="cid:docentz.png@docentz" />
+            Received Responses to <span style="color:#d2691e;font-weight:bold;">Docentz</span>
+          </td>
+        </tr>
+        <tr>
+          <td style="background: #ffffff; padding-top:10px; padding-left:10px; padding-bottom:30px; border:none; color:#21211f;font-family:Georgia,sans-serif; ">
+            Hello, <span tal:content="structure first_name">Student</span>! <br/><br/>Welcome to Docentz and congratulations for taking control of your future! Thank you for participating in our beta release. We appreciate any feedback that you have to offer us. Your personalized school bracket will be sent to this email address shortly. The following were the received submitted responses.
+            <br/>
+ 
+         <table style="width:400px; margin:15px auto; color:#228b22; font-size:11px;">
+           <tr>
+             <th style="background:#b3b3b5;color:#3d3e40;font-weight:bold;font-family:Georgia,sans-serif;padding-left:10px;">Field</th>
+             <th style="background:#b3b3b5;color:#e07014;font-weight:bold;font-family:Georgia,sans-serif;padding-left:10px;">Response</th>
+           </tr>
+           <tr tal:repeat="item python:values">
+            <td style="background:#dedee0;color:#303133;font-weight:bold;font-family:Georgia,sans-serif;padding-left:10px;" tal:content="structure python:item[0]">label</td>
+            <td style="background:#dedee0;color:#f88017;font-weight:100;font-family:Georgia,sans-serif;padding-right:10px; text-align:right;" tal:content="structure python:item[1]">data</td>
+           </tr>
+         </table>
+            <p style="background:#ffffff; padding-top:10px; padding-left:10px; padding-bottom:30px; border:none; color:#21211f;font-family:Georgia,sans-serif;">
+Let us know if you have any questions or have received this email in error.
+<br/>
+<br/>
+Sincerely, <br/>
+Docentz.com <br/>
+"Guiding student athletes towards a better future."
+            </p>
+          </td>
+        </tr>
+    </table>
+  </center>
+</div>
+
+
+  </body>
+</html>
+

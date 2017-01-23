@@ -1,0 +1,160 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+        "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+  <meta name='description' content='sports and academic management speaker' />
+  <meta name='keywords' content='sports, speaker, academics, professional, business, management' />
+  <meta property='og:site_name' content='Confessions of a Student Athlete' />
+  <meta property='og:title' content='Confessions of a Student Athlete' />
+  <meta property='og:description' content='sports and academic management speaker' />
+  <meta property='og:url' content='http://www.studentathleteconfessions.com/' />
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+  <link rel="shortcut icon" href="http://192.168.1.18:6543/static/cosa.jpeg">
+
+  <title>Confessions of a Student Athlete - Questionaire</title>
+  <link rel="stylesheet" href="/deform_static/css/form.css"
+        type="text/css"
+            />
+  <!--link href="http://192.168.1.18:6543/static/theme.css" rel="stylesheet"-->
+
+  <script type="text/javascript"
+          src="/deform_static/scripts/jquery-1.4.2.min.js"></script>
+  <script type="text/javascript"
+          src="/deform_static/scripts/deform.js"></script>
+
+  <style type='text/css'>
+  .wsite-header {
+	background-image: url(/static/cosa.jpeg) !important;
+	background-position: 0 0 !important;
+  }
+  </style>
+</head>
+
+<body>
+<div>
+  <center>
+  <h2>
+    <img class="logo img-responsive" src="http://192.168.1.18:6543/static/cosa.jpeg"> <br/>
+    Bracket Results for <b>Latitia Student5</b> - <b>Basketball (W)</b>
+  </h2>
+  <table border="2">
+    <tr>
+        <td>Divisions</td><td>[u'NCAAD1', u'NCAAD2']</td>
+    </tr>
+    <tr>
+        <td>State(s) selected</td><td>[u'California', u'Florida', u'Georgia', u'Hawaii', u'Maryland', u'Massachusetts', u'New York', u'North Carolina', u'Virginia']</td>
+    </tr>
+    <tr>
+        <td>Possible Majors</td><td>[u'Biochemistry', u'Bioengineering', u'Biology', u'Botany/Plant Biology', u'Chemical Engineering', u'Chemistry', u'Civil Engineering', u'Electrical Engineering', u'Engineering', u'Industrial Engineering', u'Marine Biology', u'Mechanical Engineering']</td>
+    </tr>
+  <table>
+  </center>
+</div>
+<p>Basketball (W) Scholarship Statistics: number given: 342; chances: 13.0</p>
+<!--div tal:content="structure form">form</div-->
+
+<canvas id="bracketField" width=1000 height=1000></canvas>
+
+<script type="text/javascript" src="/static/bracket.js">
+<!-- to hide script contents from old browsers end hiding contents from old browsers  -->
+</script>
+
+<div>
+<script type="text/javascript">
+   var ctx = document.getElementById("bracketField").getContext("2d");
+
+   window.onload = function() {
+      		L = new Bracket();
+		// Round 1
+		x = new Round();
+                var matchup;
+                var bracket = {0: ['Harvard University', ' '], 1: ['Davidson College', ' '], 2: ['U.S. Naval Academy', ' '], 3: ['University of California, Los Angeles', ' '], 4: ['University of Southern California', ' '], 5: ['Georgia Institute of Technology', ' '], 6: ['University of California, Davis', ' '], 7: ['University of Miami (Florida)', ' '], 8: ['Pepperdine University', ' '], 9: ['University of Georgia', ' '], 10: ['Virginia Polytechnic Institute &amp; State University', ' '], 11: ['Florida State University', 'Florida International University'], 12: ['University of California, Riverside', 'Nova Southeastern University'], 13: ['University of South Florida', 'University of California, Berkeley'], 14: ['University of Central Florida', 'University of North Carolina, Wilmington'], 15: ['Stetson University', 'James Madison University']};
+                for (matchup in bracket){
+                  x.append(new MatchUp(bracket[matchup][0],bracket[matchup][1]));
+                }
+                L.append(x);
+                prev = x;
+                while (x.getNumberOfMatchUps() > 0) {
+                  x = new Round(prev);
+                  M = x.previous().getMatchUps();
+                  var i;
+                  var p;
+                  for (i in M){
+                     p = M[i].getPlayers()
+                     if (p[1] == " ")
+                       M[i].setWinner(0);
+                  }
+                  var winner1, winner2;
+                  for (i in M){
+                     if (i%2 == 0) {
+                       winner1 = M[i].getWinner();
+                       winner2 = undefined;
+                     } else
+                       winner2 = M[i].getWinner();
+                     if ((winner1 != undefined) && (winner2 != undefined)) {
+                       x.append(new MatchUp(winner1,winner2,M[i-1],M[i]));
+                       winner1 = undefined;
+                     } else if (i%2 != 0) {
+                       if (winner1 == undefined)
+                         winner1 = ""
+                       if (winner2 == undefined)
+                         winner2 = ""
+                       x.append(new MatchUp(winner1,winner2,M[i-1],M[i]));
+                       winner1 = undefined;
+                     }
+                  }
+                  L.append(x);
+                  prev = x;
+                }
+
+		R = new Bracket();
+		// Round 1
+		x = new Round();
+                var matchup;
+                var bracket1 = {0: ['Stanford University', ' '], 1: ['Duke University', ' '], 2: ['Cornell University', ' '], 3: ['Colgate University', ' '], 4: ['University Of North Carolina, Chapel Hill', ' '], 5: ['College of William and Mary', ' '], 6: ['University of California, Santa Barbara', ' '], 7: ['University of California, Irvine', ' '], 8: ['Syracuse University', ' '], 9: ['Fordham University', ' '], 10: ['Stony Brook University', ' '], 11: ['University of San Diego', 'Columbia University'], 12: ['University of Maryland, Baltimore County', 'University of North Florida'], 13: ['University of North Carolina, Asheville', 'Palm Beach Atlantic University'], 14: ['University of North Carolina, Charlotte', 'California Polytechnic State University'], 15: ['Loyola Marymount University', 'Appalachian State University']};
+                for (matchup in bracket1){
+		    x.append(new MatchUp(bracket1[matchup][0],bracket1[matchup][1]));
+                }
+		R.append(x);
+		prev = x;
+                while (x.getNumberOfMatchUps() > 0) {
+                  x = new Round(prev);
+                  M = x.previous().getMatchUps();
+                  var i;
+                  var p;
+                  for (i in M){
+                     p = M[i].getPlayers()
+                     if (p[1] == " ")
+                       M[i].setWinner(0);
+                  }
+                  var winner1, winner2;
+                  for (i in M){
+                     if (i%2 == 0) {
+                       winner1 = M[i].getWinner();
+                       winner2 = undefined;
+                     } else
+                       winner2 = M[i].getWinner();
+                     if ((winner1 != undefined) && (winner2 != undefined)) {
+                       x.append(new MatchUp(winner1,winner2,M[i-1],M[i]));
+                       winner1 = undefined;
+                     } else if (i%2 != 0) {
+                       if (winner1 == undefined)
+                         winner1 = ""
+                       if (winner2 == undefined)
+                         winner2 = ""
+                       x.append(new MatchUp(winner1,winner2,M[i-1],M[i]));
+                       winner1 = undefined;
+                     }
+                  }
+                  R.append(x);
+                  prev = x;
+                }
+
+           L.draw(ctx, 1, 0, "left");
+           R.draw(ctx, 1, 0, "right");
+   }
+</script>
+</div>
+
+</body>
+</html>

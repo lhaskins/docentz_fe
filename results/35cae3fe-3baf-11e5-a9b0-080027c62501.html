@@ -1,0 +1,162 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+        "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+  <meta name='description' content='sports and academic management speaker' />
+  <meta name='keywords' content='sports, speaker, academics, professional, business, management' />
+  <meta property='og:site_name' content='Docentz' />
+  <meta property='og:title' content='Docentz' />
+  <meta property='og:description' content='sports and academic management speaker' />
+  <meta property='og:url' content='http://www.studentathleteconfessions.com/' />
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+  <link rel="shortcut icon" href="http://192.168.1.13:6543/static/docentz.jpeg">
+
+  <title>Docentz - Questionaire</title>
+  <link rel="stylesheet" href="/deform_static/css/form.css"
+        type="text/css"
+            />
+  <!--link href="http://192.168.1.13:6543/static/theme.css" rel="stylesheet"-->
+
+  <script type="text/javascript"
+          src="/deform_static/scripts/jquery-1.4.2.min.js"></script>
+  <script type="text/javascript"
+          src="/deform_static/scripts/deform.js"></script>
+
+  <style type='text/css'>
+  .wsite-header {
+	background-image: url(/static/docentz.jpeg) !important;
+	background-position: 0 0 !important;
+  }
+  </style>
+</head>
+
+<body>
+<div>
+  <center>
+  <h2>
+    <img class="logo img-responsive" src="http://192.168.1.13:6543/static/docentz.jpeg"> <br/>
+    Bracket Results for <b>Peppi Student</b> - <b>Basketball (W)</b>
+  </h2>
+  <table border="2">
+    <tr>
+        <td>Divisions</td><td>NCAAD1, NCAAD2</td>
+    </tr>
+    <tr>
+        <td>State(s) selected</td><td>GA</td>
+    </tr>
+    <tr>
+        <td>Possible Majors</td><td>Computer Engineering, Other; Computer Engineering Technologies/Technicians, Other; Computer Engineering Technology/Technician; Computer Engineering, General</td>
+    </tr>
+  <table>
+  </center>
+</div>
+<p>Basketball (W) Scholarship Statistics: number given: 342; chances: 13.0</p>
+<!--div tal:content="structure form">form</div-->
+
+
+
+
+
+<canvas id="bracketField" width=1000 height=1000></canvas>
+<script type="text/javascript" src="/static/bracket.js">
+</script>
+
+<div>
+<script type="text/javascript">
+   var ctx = document.getElementById("bracketField").getContext("2d");
+
+   window.onload = function() {
+      		L = new Bracket();
+		// Round 1
+		x = new Round();
+                var matchup;
+                var bracket = {0: ['University of Florida', 'University of Illinois at Chicago'], 1: ['Virginia Polytechnic Institute and State University', 'University of California-San Diego'], 2: ['Michigan State University', 'Arizona State University'], 3: ['University of Kansas', 'University of Nebraska-Lincoln'], 4: ['Iowa State University', 'The University of Texas at San Antonio'], 5: ['University of Utah', 'The University of Texas-Pan American'], 6: ['University of Arkansas', 'University of North Texas'], 7: ['West Virginia University', 'Indiana University-Purdue University-Indianapolis'], 8: ['Western Michigan University', 'University of New Mexico-Main Campus'], 9: ['San Jose State University', 'Texas Tech University'], 10: ['San Francisco State University', 'University of Illinois at Urbana-Champaign'], 11: ['University of Memphis', 'University of South Carolina-Columbia'], 12: ['Wayne State University', 'University of Missouri-Columbia'], 13: ['East Carolina University', 'University of Pittsburgh-Pittsburgh Campus'], 14: ['Old Dominion University', 'Ohio State University-Main Campus'], 15: ['University of California-Los Angeles', 'University of Michigan-Ann Arbor']};
+                for (matchup in bracket){
+                  x.append(new MatchUp(bracket[matchup][0],bracket[matchup][1]));
+                }
+                L.append(x);
+                prev = x;
+                while (x.getNumberOfMatchUps() > 0) {
+                  x = new Round(prev);
+                  M = x.previous().getMatchUps();
+                  var i;
+                  var p;
+                  for (i in M){
+                     p = M[i].getPlayers()
+                     if (p[1] == " ")
+                       M[i].setWinner(0);
+                  }
+                  var winner1, winner2;
+                  for (i in M){
+                     if (i%2 == 0) {
+                       winner1 = M[i].getWinner();
+                       winner2 = undefined;
+                     } else
+                       winner2 = M[i].getWinner();
+                     if ((winner1 != undefined) && (winner2 != undefined)) {
+                       x.append(new MatchUp(winner1,winner2,M[i-1],M[i]));
+                       winner1 = undefined;
+                     } else if (i%2 != 0) {
+                       if (winner1 == undefined)
+                         winner1 = ""
+                       if (winner2 == undefined)
+                         winner2 = ""
+                       x.append(new MatchUp(winner1,winner2,M[i-1],M[i]));
+                       winner1 = undefined;
+                     }
+                  }
+                  L.append(x);
+                  prev = x;
+                }
+
+		R = new Bracket();
+		// Round 1
+		x = new Round();
+                var matchup;
+                var bracket1 = {0: ['University of Georgia', 'California State University-Northridge'], 1: ['University of Iowa', 'The University of Texas at Arlington'], 2: ['Florida State University', 'University of Nevada-Las Vegas'], 3: ['Auburn University', 'Texas A &amp; M University-College Station'], 4: ['University of Arizona', 'The University of Texas at El Paso'], 5: ['University of Kentucky', 'University of Akron Main Campus'], 6: ['San Diego State University', 'California State University-Fresno'], 7: ['University of Louisville', 'Kansas State University'], 8: ['Utah State University', 'University of Minnesota-Twin Cities'], 9: ['University of North Carolina at Charlotte', 'University of South Florida-Main Campus'], 10: ['Boise State University', 'University of Cincinnati-Main Campus'], 11: ['Weber State University', 'Colorado State University-Fort Collins'], 12: ['Florida Atlantic University', 'North Carolina State University at Raleigh'], 13: ['Portland State University', 'University of Colorado Boulder'], 14: ['Georgia Institute of Technology-Main Campus', 'Pennsylvania State University-Main Campus'], 15: ['University of Virginia-Main Campus', 'University of Washington-Seattle Campus']};
+                for (matchup in bracket1){
+		    x.append(new MatchUp(bracket1[matchup][0],bracket1[matchup][1]));
+                }
+		R.append(x);
+		prev = x;
+                while (x.getNumberOfMatchUps() > 0) {
+                  x = new Round(prev);
+                  M = x.previous().getMatchUps();
+                  var i;
+                  var p;
+                  for (i in M){
+                     p = M[i].getPlayers()
+                     if (p[1] == " ")
+                       M[i].setWinner(0);
+                  }
+                  var winner1, winner2;
+                  for (i in M){
+                     if (i%2 == 0) {
+                       winner1 = M[i].getWinner();
+                       winner2 = undefined;
+                     } else
+                       winner2 = M[i].getWinner();
+                     if ((winner1 != undefined) && (winner2 != undefined)) {
+                       x.append(new MatchUp(winner1,winner2,M[i-1],M[i]));
+                       winner1 = undefined;
+                     } else if (i%2 != 0) {
+                       if (winner1 == undefined)
+                         winner1 = ""
+                       if (winner2 == undefined)
+                         winner2 = ""
+                       x.append(new MatchUp(winner1,winner2,M[i-1],M[i]));
+                       winner1 = undefined;
+                     }
+                  }
+                  R.append(x);
+                  prev = x;
+                }
+
+           L.draw(ctx, 1, 0, "left");
+           R.draw(ctx, 1, 0, "right");
+   }
+</script>
+</div>
+
+</body>
+</html>
